@@ -103,7 +103,7 @@ body{background: #fafafa;}
 .all_game > .pcGame > .pcCardView > .game:nth-of-type(4n){margin-right: 0;}
 .all_game > .pcGame > .pcCardView > .game:hover{box-shadow: 3px 3px 5px #cccaca}
 
-.all_game > .pcGame > .pcCardView > .game .gameImg{width: 280px; height: 185px; margin-bottom: 20px; overflow: hidden;}
+.all_game > .pcGame > .pcCardView > .game .gameImg{display: block; width: 280px; height: 185px; margin-bottom: 20px; overflow: hidden;}
 .all_game > .pcGame > .pcCardView > .game .gameImg img{display: block; width: 280px; transition: all 0.2s linear;}
 .all_game > .pcGame > .pcCardView > .game .gameImg img:hover{transform: scale(1.1)}
 
@@ -114,9 +114,29 @@ body{background: #fafafa;}
 
 .all_game > .pcGame > .pcCardView > .game .gameCate{float: left; width: auto; padding-left: 20px; font-size: 12px; color: #737881;}
 
-.all_game > .pcGame > .pcCardView > .game .gameUpdate{float: right; width: auto; padding: 0 5px; border: 1px solid #2be283; border-radius: 8px; font-size: 12px; color: #fff; background: #2be283;}
+.all_game > .pcGame > .pcCardView > .game .gameUpdate{float: right; width: auto; margin-right: 20px; padding: 0 5px; border: 1px solid #2be283; border-radius: 8px; font-size: 12px; color: #fff; background: #2be283;}
 
-.all_game > .mobileGame{}
+.all_game > .mobileGame{width: 1180px; margin: 0 auto;}
+.all_game > .mobileGame h3{font-size: 20px; margin-bottom: 20px;}
+.all_game > .mobileGame > .mobileCardView{}
+.all_game > .mobileGame > .mobileCardView > .game{float: left; width: 280px; height: 120px; margin-right: 20px;}
+.all_game > .mobileGame > .mobileCardView > .game:nth-of-type(4n){margin-right: 0;}
+
+.all_game > .mobileGame > .mobileCardView > .game .gameImg{}
+.all_game > .mobileGame > .mobileCardView > .game .gameImg img{display: block; width: 86px;}
+
+.all_game > .mobileGame > .mobileCardView > .game .gameName{}
+
+.all_game > .mobileGame > .mobileCardView > .game .gameDes{}
+.all_game > .mobileGame > .mobileCardView > .game .gameDes .event{}
+
+.all_game > .mobileGame > .mobileCardView > .game .gameCate{}
+
+.all_game > .mobileGame > .mobileCardView > .game .gameStore{}
+.all_game > .mobileGame > .mobileCardView > .game .gameStore img{display: block; width: 18px; height: 20px;}
+
+
+
 
 
 
