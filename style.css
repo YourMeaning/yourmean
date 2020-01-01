@@ -1,0 +1,139 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'roboto'; color: #17191d}
+ul, ol, li{list-style: none}
+a{text-decoration: none}
+input,button{border: none;}
+.cf::after{content: ''; display: block; clear: both}
+
+
+body{background: #fafafa;}
+
+/*헤더*/
+
+#header{width: 100%;}
+#header > .gnbWrapper{position: relative; height: 62px;}
+#header > .gnbWrapper > .gnbLeft{float: left; width: 95px; height: 62px; padding: 22px 20px;}
+#header > .gnbWrapper > .gnbLeft a{display: flex; justify-content: space-between;}
+#header > .gnbWrapper > .gnbLeft a *{line-height: 14px;}
+
+#header > .gnbWrapper > .gnbLogo{position: absolute; width: 130px; left: 50%; transform: translate(-50%);}
+
+#header > .gnbWrapper > .gnbRight{float: right; display: flex; justify-content: space-between; padding: 20px;}
+#header > .gnbWrapper > .gnbRight *{margin-right: 20px;}
+#header > .gnbWrapper > .gnbRight .gnbPc span{margin-right: 0px; font-weight: bold; color: #9fa1a7}
+#header > .gnbWrapper > .gnbRight .gnbLogin{margin-right: 0px; padding: 5px 15px; border: 1.5px solid black; border-radius: 30px; transform: translate(0,-5px); font-weight: bold;}
+
+
+/*비주얼*/
+.visual{width: 100%; height: auto; background: #2a2c57;}
+.visual > .visualWrapper{position: relative; width: 1180px; height: 340px; margin: 0 auto; background: url(img/visual_bg.png); background-size: cover; background-repeat: no-repeat; background-position: center;}
+.visual > .visualWrapper > .visualCharacter{position: absolute; right: -320px; top: -100px; width: 1180px; height: 560px; transform: scale(0.6); background: url(img/visual_character.png);}
+.visual > .visualWrapper > .visualText{position: absolute; left: 120px; top: -15px; width: 400px; height: 300px; transform: scale(0.6); background: url(img/visual_text.png);}
+
+
+/*추천게임*/
+.info{width: 1180px; height: 362px; margin: 100px auto;}
+.info > .title{width: 100%; height: auto; margin-bottom: 30px;}
+.info > .title h2{float: left;}
+.info > .title p{float: right;}
+
+.info > .gameRecommend{float: left; margin-right: 20px; background: #fff;}
+.info > .gameRecommend > li{position: relative; float: left; width: 130px; height: 300px; margin-right: 20px;}
+.info > .gameRecommend > li:last-of-type{margin-right: 0px;}
+.info > .gameRecommend > li .gameImg{display: block; margin-bottom: 10px;}
+.info > .gameRecommend > li .gameImg img{display: block; width: 130px;}
+.info > .gameRecommend > li .recommend{display: block; width: 32px; height: 16px; margin-left: 10px; margin-bottom: 10px; padding: 2px 5px;; border-radius: 20px; font-size: 10px; font-weight: bold; color: #fff; background: #00dbd3;}
+.info > .gameRecommend > li .gameName{display: block; font-size: 14px; font-weight: bold; margin-left: 10px; margin-bottom: 10px;}
+.info > .gameRecommend > li .gameReason{position: absolute; left: 10px; bottom: 10px; display: block; font-size: 12px; color: #9fa1a7;}
+
+/*로그인*/
+.info > .login{float: left; width: 430px; height: 300px; padding-left: 40px; background: #fff;}
+.info > .login > .nexon{display: block; width: 350px; height: 60px; margin-bottom: 10px; text-align: center; font-size: 15px; font-weight: bold; line-height: 60px; color: #fff; background: #17191d;}
+
+.info > .login > .etc{width: 350px; margin-bottom:10px;}
+.info > .login > .etc .pcLogin{float: left; display: block; width: 170px; height: 50px; margin-right: 10px; line-height: 50px; text-align: center; font-weight: bold; color: #fff; background: #4a4e57;}
+.info > .login > .etc .qrLogin{float: left; display: block; width: 170px; height: 50px; line-height: 50px; text-align: center; font-weight: bold; color: #fff; background: #4a4e57;}
+
+.info > .login > .other{width: 350px; height: 40px; margin-bottom: 10px; padding: 0 63px; text-align: center; background: #f8f9fa;}
+.info > .login > .other p{float: left; margin-right: 10px; font-size: 12px; line-height: 40px; color: #9fa1a7;}
+.info > .login > .other img{float: left; width: 22px; margin-top: 9px; margin-right: 10px;}
+
+.info > .login > .find{float: left; width: 200px; height: 40px;}
+.info > .login > .find a{font-size: 12px; line-height: 40px; color: #737881; margin-right: 20px;}
+
+.info > .login > .join{float: left; width: 150px; height: 40px;text-align: right; }
+.info > .login > .join a{font-size: 12px; line-height: 40px; color: #737881;}
+
+.info > .login > .tooltip{position: relative; clear: both; width: 350px; height: 40px; text-align: center; background: rgba(27,31,36,.9);}
+.info > .login > .tooltip::before{content: ''; position: absolute; top: -6px; right: 20px; display: block; border-left: 4px solid transparent; border-right: 4px solid transparent; border-bottom: 6px solid rgba(27,31,36,.9); z-index: 1;}
+.info > .login > .tooltip a{margin-right: 5px; line-height: 40px; font-size: 11px; color: #fff;}
+.info > .login > .tooltip i{line-height: 40px; font-size: 11px; color: #fff; cursor: pointer;}
+
+/*전체게임*/
+.all_game{width: 1180px; margin: 0 auto;}
+.all_game > h2{float: left; margin-bottom: 30px;}
+
+.all_game > .viewtype{float: left; margin-left: 10px;}
+.all_game > .viewtype i{float: left; display:block; padding: 8px; border: 1.2px solid  #737881; font-size: 14px; color: #737881; cursor: pointer;}
+.all_game > .viewtype i.on{border-color: #17191d; background: #17191d; color: #fff;}
+
+.all_game > .tooltip{position: relative; float: left; width: 300px; height: 40px; margin-top: -4px; margin-left: 20px; text-align: center; background: rgba(27,31,36,.9);}
+.all_game > .tooltip::after{content: ''; position: absolute; top: 16px; left: -6px; display: block; border-top: 4px solid transparent; border-bottom: 4px solid transparent; border-left-width: 0; border-right: 6px solid rgba(27,31,36,.9); z-index: 1;}
+.all_game > .tooltip p{display: inline-block; margin-right: 5px; line-height: 40px; font-size: 11px; color: #fff;}
+.all_game > .tooltip i{line-height: 40px; font-size: 11px; color: #fff; cursor: pointer;}
+
+.all_game > .search{position: relative; float: right; margin-right: 40px; border-bottom: 1px solid #dde1e5; transition: all .2s linear;}
+.all_game > .search:hover{border-bottom-color: #c7c8cc;}
+.all_game > .search:hover button{border-bottom-color: #c7c8cc;}
+.all_game > .search input{width: 300px; height: 40px; margin-top: -4px; padding: 0 3px; background: #fff;}
+.all_game > .search input::placeholder{font-size: 14px; color: #9fa1a7}
+.all_game > .search button{position: absolute; top: -3px; right: -40px; width: 40px; height: 40px; border-bottom: 1px solid #dde1e5; background: #fff; cursor: pointer; transition: all .2s linear;}
+.all_game > .search button i{font-size: 24px; line-height: 40px;}
+
+.all_game > .filter{clear: both; width: 1180px; height: 120px; margin-bottom: 30px; padding: 30px; background: #fff;}
+.all_game > .filter li{float: left; margin-right: 20px; margin-bottom: 20px;}
+.all_game > .filter li input{display: none;}
+.all_game > .filter li input:checked+label{color: #fff; border: 1ps solid #17191d; background: #17191d;}
+.all_game > .filter li label{display: block; height: 21px; padding: 1.5px 10px 0; border: 1px solid #fff; border-radius: 12px; font-size: 12px; color: #9fa1a7; background: #fff; cursor: pointer;}
+
+.all_game > .pcGame{width: 1180px; height: 3200px; margin: 0 auto;}
+.all_game > .pcGame h3{display: inline-block; margin-right: 20px; font-size: 20px; margin-bottom: 20px;}
+.all_game > .pcGame a{display: inline-block; font-size: 20px; font-weight: bold; color: #c7c8cc;}
+.all_game > .pcGame > .pcCardView{width: 100%;}
+.all_game > .pcGame > .pcCardView > .game{float: left; width: 280px; height: 300px; margin-right: 20px; margin-bottom: 50px; background: #fff; overflow: hidden; transition: all 0.2s linear;}
+.all_game > .pcGame > .pcCardView > .game:nth-of-type(4n){margin-right: 0;}
+.all_game > .pcGame > .pcCardView > .game:hover{box-shadow: 3px 3px 5px #cccaca}
+
+.all_game > .pcGame > .pcCardView > .game .gameImg{width: 280px; height: 185px; margin-bottom: 20px; overflow: hidden;}
+.all_game > .pcGame > .pcCardView > .game .gameImg img{display: block; width: 280px; transition: all 0.2s linear;}
+.all_game > .pcGame > .pcCardView > .game .gameImg img:hover{transform: scale(1.1)}
+
+.all_game > .pcGame > .pcCardView > .game .gameName{margin-bottom: 10px; padding: 0 20px; font-weight: bold; letter-spacing: -1px;}
+
+.all_game > .pcGame > .pcCardView > .game .gameDes{display: block; width: 240px; height: 22px; margin: 0 auto 10px; border-bottom: 1px solid #f2f5f8; font-size: 12px; letter-spacing: -.3px; line-height: 22px; color: #737881; overflow: hidden;}
+.all_game > .pcGame > .pcCardView > .game .gameDes span{margin-right: 10px; color: #07f;}
+
+.all_game > .pcGame > .pcCardView > .game .gameCate{float: left; width: auto; padding-left: 20px; font-size: 12px; color: #737881;}
+
+.all_game > .pcGame > .pcCardView > .game .gameUpdate{float: right; width: auto; padding: 0 5px; border: 1px solid #2be283; border-radius: 8px; font-size: 12px; color: #fff; background: #2be283;}
+
+.all_game > .mobileGame{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer{width: 100%; height: 500px;}
+
+
