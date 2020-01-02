@@ -37,10 +37,13 @@ body{background: #fafafa;}
 .info > .title p{float: right;}
 
 .info > .gameRecommend{float: left; margin-right: 20px; background: #fff;}
-.info > .gameRecommend > li{position: relative; float: left; width: 130px; height: 300px; margin-right: 20px;}
+.info > .gameRecommend > li{position: relative; float: left; width: 130px; height: 300px; margin-right: 20px; transition: all 0.2s linear; cursor: pointer;}
+.info > .gameRecommend > li:hover{box-shadow: 0px 0px 10px 1px #cccaca;}
 .info > .gameRecommend > li:last-of-type{margin-right: 0px;}
-.info > .gameRecommend > li .gameImg{display: block; margin-bottom: 10px;}
-.info > .gameRecommend > li .gameImg img{display: block; width: 130px;}
+
+.info > .gameRecommend > li .gameImg{display: block; margin-bottom: 10px; overflow: hidden;}
+.info > .gameRecommend > li .gameImg img{display: block; width: 130px; height: 163px; transition: all 0.2s linear;}
+.info > .gameRecommend > li:hover .gameImg img{transform: scale(1.1);}
 .info > .gameRecommend > li .recommend{display: block; width: 32px; height: 16px; margin-left: 10px; margin-bottom: 10px; padding: 2px 5px;; border-radius: 20px; font-size: 10px; font-weight: bold; color: #fff; background: #00dbd3;}
 .info > .gameRecommend > li .gameName{display: block; font-size: 14px; font-weight: bold; margin-left: 10px; margin-bottom: 10px;}
 .info > .gameRecommend > li .gameReason{position: absolute; left: 10px; bottom: 10px; display: block; font-size: 12px; color: #9fa1a7;}
@@ -69,7 +72,7 @@ body{background: #fafafa;}
 .info > .login > .tooltip i{line-height: 40px; font-size: 11px; color: #fff; cursor: pointer;}
 
 /*전체게임*/
-.all_game{width: 1180px; margin: 0 auto;}
+.all_game{width: 1180px; margin: 0 auto 200px;}
 .all_game > h2{float: left; margin-bottom: 30px;}
 
 .all_game > .viewtype{float: left; margin-left: 10px;}
@@ -116,9 +119,9 @@ body{background: #fafafa;}
 
 .all_game > .pcGame > .pcCardView > .game .gameUpdate{float: right; width: auto; margin-right: 20px; padding: 0 5px; border: 1px solid #2be283; border-radius: 8px; font-size: 12px; color: #fff; background: #2be283;}
 
-.all_game > .mobileGame{width: 1180px; margin: 0 auto;}
+.all_game > .mobileGame{width: 1180px; height: 880px; margin: 0 auto;}
 .all_game > .mobileGame h3{font-size: 20px; margin-bottom: 20px;}
-.all_game > .mobileGame > .mobileCardView{}
+.all_game > .mobileGame > .mobileCardView{width: 100%; height: 100%;}
 .all_game > .mobileGame > .mobileCardView > .game{position: relative; float: left; width: 280px; height: 120px; margin-right: 20px; margin-bottom: 20px; padding: 17px 17px; background: #fff; transition: all 0.2s linear;}
 .all_game > .mobileGame > .mobileCardView > .game:hover{box-shadow: 0px 0px 10px 1px #cccaca;}
 .all_game > .mobileGame > .mobileCardView > .game:nth-of-type(4n){margin-right: 0;}
@@ -136,25 +139,23 @@ body{background: #fafafa;}
 .all_game > .mobileGame > .mobileCardView > .game .gameStore{position: absolute; bottom: 17px; left: 120px;}
 .all_game > .mobileGame > .mobileCardView > .game .gameStore img{display: block; float: left; width: 18px; height: 20px; margin-right: 10px;}
 
+/*푸터 시작*/
+#footer{width: 100%; background: #222426;}
+#footer > .footer_top{width: 100%; padding: 20px 40px; border-bottom: 1px solid rgba(248,249,250,.3);}
+#footer > .footer_top > .notice{display: block; float: left;}
+#footer > .footer_top > .notice p{font-size: 12px; font-weight: 700; color: #fff;}
+#footer > .footer_top > .notice p:hover{text-decoration: underline;}
+#footer > .footer_top > .sns{display: block; float: right;}
+#footer > .footer_top > .sns li{float: left; margin-left: 20px;}
+#footer > .footer_top > .sns li i{display: block; width: 19px; height: 19px; color: #fff;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#footer{width: 100%; height: 500px;}
+#footer > .footer_bot{width: 100%; padding: 20px 40px;}
+#footer > .footer_bot > .footer_nav{display: flex; flex-wrap: wrap; width: 80%; margin-bottom: 10px;}
+#footer > .footer_bot > .footer_nav li{position: relative; margin-right: 30px;}
+#footer > .footer_bot > .footer_nav li::before{content: ''; display: block; position: absolute; right: -15px; top: 6px; width: 1px; height: 10px; background: rgba(248,249,250,.5);}
+#footer > .footer_bot > .footer_nav li a{font-size: 12px; color: rgba(248,249,250,0.7);}
+#footer > .footer_bot > .address{font-size: 11px; font-style: normal; line-height: 20px; color: rgba(248,249,250,.3);}
+#footer > .footer_bot > .copyright{margin-bottom: 10px; font-size: 11px; line-height: 20px; color: rgba(248,249,250,.3);}
+#footer > .footer_bot > .logo img{display: inline-block; width: 68px; height: 23px;}
 
 
