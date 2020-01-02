@@ -101,7 +101,7 @@ body{background: #fafafa;}
 .all_game > .pcGame > .pcCardView{width: 100%;}
 .all_game > .pcGame > .pcCardView > .game{float: left; width: 280px; height: 300px; margin-right: 20px; margin-bottom: 50px; background: #fff; overflow: hidden; transition: all 0.2s linear;}
 .all_game > .pcGame > .pcCardView > .game:nth-of-type(4n){margin-right: 0;}
-.all_game > .pcGame > .pcCardView > .game:hover{box-shadow: 3px 3px 5px #cccaca}
+.all_game > .pcGame > .pcCardView > .game:hover{box-shadow: 0px 0px 10px 1px #cccaca;}
 
 .all_game > .pcGame > .pcCardView > .game .gameImg{display: block; width: 280px; height: 185px; margin-bottom: 20px; overflow: hidden;}
 .all_game > .pcGame > .pcCardView > .game .gameImg img{display: block; width: 280px; transition: all 0.2s linear;}
@@ -119,21 +119,22 @@ body{background: #fafafa;}
 .all_game > .mobileGame{width: 1180px; margin: 0 auto;}
 .all_game > .mobileGame h3{font-size: 20px; margin-bottom: 20px;}
 .all_game > .mobileGame > .mobileCardView{}
-.all_game > .mobileGame > .mobileCardView > .game{float: left; width: 280px; height: 120px; margin-right: 20px;}
+.all_game > .mobileGame > .mobileCardView > .game{position: relative; float: left; width: 280px; height: 120px; margin-right: 20px; margin-bottom: 20px; padding: 17px 17px; background: #fff; transition: all 0.2s linear;}
+.all_game > .mobileGame > .mobileCardView > .game:hover{box-shadow: 0px 0px 10px 1px #cccaca;}
 .all_game > .mobileGame > .mobileCardView > .game:nth-of-type(4n){margin-right: 0;}
 
-.all_game > .mobileGame > .mobileCardView > .game .gameImg{}
-.all_game > .mobileGame > .mobileCardView > .game .gameImg img{display: block; width: 86px;}
+.all_game > .mobileGame > .mobileCardView > .game .gameImg{float: left; margin-right: 17px;}
+.all_game > .mobileGame > .mobileCardView > .game .gameImg img{display: block; width: 86px; border-radius: 18px;}
 
-.all_game > .mobileGame > .mobileCardView > .game .gameName{}
+.all_game > .mobileGame > .mobileCardView > .game .gameName{margin-bottom: 10px; font-weight: bold; letter-spacing: -1px;}
 
-.all_game > .mobileGame > .mobileCardView > .game .gameDes{}
-.all_game > .mobileGame > .mobileCardView > .game .gameDes .event{}
+.all_game > .mobileGame > .mobileCardView > .game .gameDes{display: block;}
+.all_game > .mobileGame > .mobileCardView > .game .gameDes .event{font-size: 12px; letter-spacing: -.3px; color: #07f;}
 
-.all_game > .mobileGame > .mobileCardView > .game .gameCate{}
+.all_game > .mobileGame > .mobileCardView > .game .gameCate{font-size: 12px; color: #737881;}
 
-.all_game > .mobileGame > .mobileCardView > .game .gameStore{}
-.all_game > .mobileGame > .mobileCardView > .game .gameStore img{display: block; width: 18px; height: 20px;}
+.all_game > .mobileGame > .mobileCardView > .game .gameStore{position: absolute; bottom: 17px; left: 120px;}
+.all_game > .mobileGame > .mobileCardView > .game .gameStore img{display: block; float: left; width: 18px; height: 20px; margin-right: 10px;}
 
 
 
