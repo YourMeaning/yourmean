@@ -27,22 +27,127 @@ $(document).ready(function(){
     
     //전체게임 뷰타입 바꾸기
     $('.viewtype > i').on('click', function(){
-        $(this).addClass('on');
-        $(this).siblings().removeClass('on');
+        $(this).addClass('on').siblings().removeClass('on');
     });
     
     //게임 필터 적용
     $('.filter > li > label').on('click', function(){
         $('label').parent('li').removeClass('on');
         $(this).parent('li').addClass('on');
+        $('.mobileMore').remove();
         var i = $('.filter > li > label').index(this);
         
         if(i == 0){
+            $('.game').show();
+            $('.mobileGame').append('<div class=mobileMore>더보기</div>');
+            moreCount = 0;
+            $('.mobileGame .game').each(function(){
+                if(moreCount <= 11){
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+                moreCount++;
+            });
+        } else if(i == 1){
+            $('.game').hide();
+            $('.top10').parents('.game').show();
+        } else if(i == 2){
+            $('.game').hide();
+            $('.long').parents('.game').show();
+        } else if(i == 3){
+            $('.game').hide();
+            $('.gameCate:contains(RPG)').parents('.game').show();
+            $('.gameCate:contains(ACTION)').parents('.game').hide();
+        } else if(i == 4){
+            $('.game').hide();
+            $('.gameCate:contains(ACTION)').parents('.game').show();
+        } else if(i == 5){
+            $('.game').hide();
+            $('.gameCate:contains(AOS/MOBA)').parents('.game').show();
+        } else if(i == 6){
+            $('.game').hide();
+            $('.gameCate:contains(FPS)').parents('.game').show();
+        } else if(i == 7){
+            $('.game').hide();
+            $('.gameCate:contains(캐주얼)').parents('.game').show();
+            $('.gameCate:contains(레이싱)').parents('.game').show();
+        } else if(i == 8){
+            $('.game').hide();
+            $('.gameCate:contains(스포츠)').parents('.game').show();
+        } else if(i == 9){
+            $('.game').hide();
+            $('.gameDes > .event').parents('.game').show();
+        } else if(i == 10){
+            $('.game').hide();
+            $('.gameUpdate').parents('.game').show();
+        } else if(i == 11){
+            $('.game').hide();
+        };
+        
+        //하나도 없을시 검색초기화버튼 제공 피씨
+        var displayCheck = 0;
+        $('.pcGameNone').remove();
+        $('.mobileGameNone').remove();
+        
+        $('.pcCardView > .game').each(function(i){
+            var gameDisplay = $('.pcCardView > .game').eq(i).css('display');
             
+            if(gameDisplay == 'none'){
+                displayCheck+=1;
+            };
+            i++;
+        });
+        
+        if(displayCheck == 33){
+            $('.pcGame').append("<div class=pcGameNone><p>선택하신 조건의 검색결과가 없습니다.<br>다른 조건으로 검색해주세요.</p><p class=pcGameReset>검색초기화</p></div>");
+        };
+        
+//        모바일
+        displayCheck = 0;
+        $('.mobileCardView > .game').each(function(i){
+            var gameDisplay = $('.mobileCardView > .game').eq(i).css('display');
+            
+            if(gameDisplay == 'none'){
+                displayCheck+=1;
+            };
+            i++;
+        });
+        
+        if(displayCheck == 23){
+            $('.mobileGame').append("<div class=mobileGameNone><p>선택하신 조건의 검색결과가 없습니다.<br>다른 조건으로 검색해주세요.</p><p class=mobileGameReset>검색초기화</p></div>");
         };
     });
     
+    $(document).on('click','.pcGameReset',function(){
+        $('#filter_0').trigger('click');
+        $('.game').show();
+        $('.pcGameNone').remove();
+        $('.mobileGameNone').remove();
+    });
+    $(document).on('click','.mobileGameReset',function(){
+        $('#filter_0').trigger('click');
+        $('.game').show();
+        $('.pcGameNone').remove();
+        $('.mobileGameNone').remove();
+    });
     
+    //모바일게임 더보기 버튼
+    var moreCount = 0;
+    $('.mobileGame .game').each(function(){
+        if(moreCount <= 11){
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+        moreCount++;
+    });
     
+    $('.mobileGame').append('<div class=mobileMore>더보기</div>');
+    
+    $(Document).on('click', '.mobileMore', function(){
+        $(this).remove();
+        $('.mobileGame .game').show();
+    })
     
 });
