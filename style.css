@@ -130,9 +130,12 @@ body{background: #fafafa;}
 .all_game > .filter li label{display: block; height: 21px; padding: 1.5px 10px 0; border: 1px solid #fff; border-radius: 12px; font-size: 12px; color: #9fa1a7; background: #fff; cursor: pointer;}
 
 /*전체게임 > PC게임*/
+
 .all_game > .pcGame{width: 1200px; height: auto; margin: 0 auto;}
 .all_game > .pcGame h3{display: inline-block; margin-right: 20px; font-size: 20px; margin-bottom: 20px;}
 .all_game > .pcGame a{display: inline-block; font-size: 20px; font-weight: bold; color: #c7c8cc;}
+
+/*카드뷰*/
 .all_game > .pcGame > .pcCardView{width: 100%;}
 .all_game > .pcGame > .pcCardView > .game{float: left; width: 280px; height: 320px; margin-right: 20px; margin-bottom: 50px; background: #fff; overflow: hidden; transition: all 0.2s linear;}
 .all_game > .pcGame > .pcCardView > .game:hover{box-shadow: 0px 0px 10px 1px #cccaca;}
@@ -140,6 +143,8 @@ body{background: #fafafa;}
 .all_game > .pcGame > .pcCardView > .game .gameImg{display: block; width: 280px; height: 185px; margin-bottom: 20px; overflow: hidden;}
 .all_game > .pcGame > .pcCardView > .game .gameImg img{display: block; width: 280px; transition: all 0.2s linear;}
 .all_game > .pcGame > .pcCardView > .game .gameImg img:hover{transform: scale(1.1)}
+
+.all_game > .pcGame > .pcCardView > .game .gameImgList{display: none;}
 
 .all_game > .pcGame > .pcCardView > .game .gameName{margin-bottom: 10px; padding: 0 20px; font-weight: bold; letter-spacing: -1px;}
            
@@ -153,6 +158,18 @@ body{background: #fafafa;}
 .all_game > .pcGame > .pcGameNone p{display: block; width: 300px; margin: 0 auto; font-size: 14px; text-align: center; color: #9fa1a7;}
 .all_game > .pcGame > .pcGameNone .pcGameReset{width: 150px; margin-top: 20px; padding: 10px 0; border: 2px solid #9fa1a7; font-weight: bold; cursor: pointer; transition: all 0.3s linear;}
 .all_game > .pcGame > .pcGameNone .pcGameReset:hover{background: #9fa1a7; color: #fff;}
+
+/*리스트뷰*/
+.all_game > .pcGame > .pcListView{width: 100%; height: auto; margin-bottom: 50px;}
+.all_game > .pcGame > .pcListView > .game{float: left; width: 280px; margin-right: 20px; margin-bottom: 10px;}
+.all_game > .pcGame > .pcListView > .game > a{display: block; height: 50px; padding: 9px;}
+.all_game > .pcGame > .pcListView > .game > a > .gameImg{display: none;}
+.all_game > .pcGame > .pcListView > .game > a > .gameImgList{display: inline-block; margin-right: 10px; vertical-align: middle;}
+.all_game > .pcGame > .pcListView > .game > a > .gameImgList img{width: 32px; border-radius: 16px;}
+.all_game > .pcGame > .pcListView > .game > a > .gameName{vertical-align: middle; font-size: 16px; font-weight: bold; letter-spacing: -1px;}
+.all_game > .pcGame > .pcListView > .game > a > .gameDes{display: none;}
+.all_game > .pcGame > .pcListView > .game > a > .gameCate{display: none;}
+.all_game > .pcGame > .pcListView > .game > a > .gameUpdate{padding: 0 5px; border: 1px solid #2be283; border-radius: 8px; font-size: 12px; color: #fff; background: #2be283;}
 
 /*전체게임 > 모바일게임*/
 .all_game > .mobileGame{width: 1200px; height: auto; margin: 0 auto;}
@@ -173,6 +190,26 @@ body{background: #fafafa;}
 
 .all_game > .mobileGame > .mobileCardView > .game .gameStore{position: absolute; bottom: 17px; left: 120px;}
 .all_game > .mobileGame > .mobileCardView > .game .gameStore img{display: block; float: left; width: 18px; height: 20px; margin-right: 10px;}
+
+/*리스트뷰*/
+.all_game > .mobileGame > .mobileListView > .game{position: relative; float: left; width: 280px; height: 50px; margin-right: 20px; margin-bottom: 10px; padding: 9px;}
+
+.all_game > .mobileGame > .mobileListView > .game .gameImg{float: left; margin-right: 17px;}
+.all_game > .mobileGame > .mobileListView > .game .gameImg:hover+.gameName{color: #07f}
+.all_game > .mobileGame > .mobileListView > .game .gameImg img{display: block; width: 32px; border-radius: 8px;}
+
+.all_game > .mobileGame > .mobileListView > .game .gameName{display: inline-block; margin-top: 4px; font-weight: bold; letter-spacing: -1px; transition: all 0.2s linear;}
+.all_game > .mobileGame > .mobileListView > .game .gameName:hover{color: #07f}
+
+.all_game > .mobileGame > .mobileListView > .game .gameDes{display: none;}
+.all_game > .mobileGame > .mobileListView > .game .gameDes .event{display: none;}
+
+.all_game > .mobileGame > .mobileListView > .game .gameCate{display: none;}
+
+.all_game > .mobileGame > .mobileListView > .game .gameStore{display: none;}
+.all_game > .mobileGame > .mobileListView > .game .gameStore img{display: none;}
+
+
 .all_game > .mobileGame > .mobileGameNone{padding: 30px 0;}
 .all_game > .mobileGame > .mobileGameNone p{display: block; width: 300px; margin: 0 auto; font-size: 14px; text-align: center; color: #9fa1a7;}
 .all_game > .mobileGame > .mobileGameNone > .mobileGameReset{width: 150px; margin-top: 20px; padding: 10px 0; border: 2px solid #9fa1a7; font-weight: bold; cursor: pointer; transition: all 0.3s linear;}
