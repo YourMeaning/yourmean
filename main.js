@@ -51,6 +51,7 @@ $(document).ready(function(){
             });
         };
     });
+    
     //리스트뷰
     $('.viewtype > i').eq(1).on('click', function(){
         $('.mobileCardView').removeClass('mobileCardView')
@@ -82,7 +83,6 @@ $(document).ready(function(){
                     moreCount++;
                 });
             };
-            
         } else if(i == 1){
             $('.game').hide();
             $('.top10').parents('.game').show();
@@ -224,7 +224,30 @@ $(document).ready(function(){
         $(Document).on('click', '.mobileMore', function(){
             $(this).remove();
             $('.mobileGame .game').show();
+            docHeight = $(document).height();
+            posFooter = $('#footer').offset().top;
         })
     };
+    
+    //네비게이션
+    var posVisual = $('.visual').offset().top;
+    var docHeight = $(document).height();
+    var posFooter = $('#footer').offset().top;
+    var windowHeight = $(window).height();
+    $(window).on('resize', function(){
+        windowHeight = $(window).height();
+    });
+    
+    $(window).on('scroll', function(){
+        var scroll = $(window).scrollTop();
+        if(scroll <= posVisual){
+            $('.navi').fadeOut();
+        } else if(scroll >= posVisual && scroll + windowHeight <= posFooter){
+            $('.navi').fadeIn();
+            $('.navi').removeClass('scrollBot');
+        } else if(scroll + windowHeight >= posFooter){
+            $('.navi').addClass('scrollBot');
+        }
+    });
     
 });

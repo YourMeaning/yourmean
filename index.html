@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>넥슨</title>
+    <link rel="icon" href="img/icon/nexon.ico">
     
 <!--    메인 스타일-->
     <link rel="stylesheet" href="style.css">
     
+<!--    웹폰트-->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
 <!--    폰트어썸-->
     <script src="https://kit.fontawesome.com/6e8255495e.js" crossorigin="anonymous"></script>
     
@@ -15,6 +19,12 @@
     
 <!--    메인 제이쿼리-->
     <script src="main.js"></script>
+    
+<!--    bxSlider-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="bxSlider.js"></script>
+    
     
 </head>
 <body>
@@ -55,7 +65,7 @@
                     
                     <div class="gnbContentTop cf">
                         <div class="gnbViewType">
-                            <input type="radio"checked name="gnbViewType" id="gnbViewType_0">
+                            <input type="radio" checked name="gnbViewType" id="gnbViewType_0">
                             <label for="gnbViewType_0">PC 게임</label>
                             <input type="radio" name="gnbViewType" id="gnbViewType_1">
                             <label for="gnbViewType_1">모바일 게임</label>
@@ -152,17 +162,24 @@
     
     <section class="visual">
         
-        <div class="visualWrapper">
-            
-            <div class="visualCharacter">
-            
-            </div>
-            
-            <div class="visualText">
-                
-            </div>
-            
+        <ul class="bxslider">
+            <li><img src="img/slider/df.png" alt></li>
+            <li><img src="img/slider/kart.png" alt></li>
+            <li><img src="img/slider/bf.jpg" alt></li>
+            <li><img src="img/slider/csonline.png" alt></li>
+            <li><img src="img/slider/counterside.jpg" alt></li>
+            <li><img src="img/slider/sky.jpg" alt></li>
+        </ul>
+        
+        <div id="bx-pager">
+            <a data-slide-index="0" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
+            <a data-slide-index="1" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
+            <a data-slide-index="2" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
+            <a data-slide-index="3" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
+            <a data-slide-index="4" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
+            <a data-slide-index="5" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
         </div>
+        
         
     </section>
     
@@ -237,7 +254,7 @@
         
     </section>
     
-    <section class="all_game">
+    <section class="allGame">
         
         <h2>전체게임</h2>
         
@@ -257,7 +274,7 @@
         
         <ul class="filter">
             <li>
-                <input type="radio"checked name="filter" id="filter_0">
+                <input type="radio" checked name="filter" id="filter_0">
                 <label for="filter_0">#전체</label>
             </li>
             <li>
@@ -307,7 +324,7 @@
         </ul>
         
         <div class="pcGame">
-            <h3>PC게임</h3>
+            <h3 id="pcGame">PC게임</h3>
             <a href="#mobileGame">모바일게임</a>
             <ul class="pcCardView cf">
                 <li class="game">
@@ -844,10 +861,23 @@
                     </a>
                 </li>
             </ul>
-            
         </div>
         
-        
+        <div class="navi">
+            <a class="naviPc" href="#pcGame">
+                <i class="fas fa-desktop"></i>
+                <span>PC게임</span>
+            </a>
+            <a class="naviMobile" href="#mobileGame">
+                <i class="fas fa-mobile-alt"></i>
+                <span>모바일게임</span>
+            </a>
+            <a class="naviTop" href="#header">
+                <i class="fas fa-arrow-up"></i>
+                <span>TOP</span>
+            </a>
+        </div>
+
     </section>
     
     <footer id="footer">
@@ -892,7 +922,6 @@
             </a>
             
         </div>
-        
         
     </footer>
     
