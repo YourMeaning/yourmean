@@ -52,24 +52,11 @@ body{position: relative; background: #f8f9fa;}
 
 
 /*비주얼*/
-.visual{width: 100%;}
-.visual .bxslider{width: 100%;}
-.visual .bxslider li{width: 100%;}
-.visual .bxslider li img{display: block; width: 100%;}
-
-.bx-wrapper{position: relative; top 0;margin-bottom: 0; box-shadow: none; border: none;}
-.bx-wrapper > .bx-viewport{}
-.bx-wrapper > .bx-viewport > .bx-slider{}
-.bx-wrapper > .bx-viewport > .bx-slider > li{}
-.bx-wrapper > .bx-controls{}
-.bx-wrapper > .bx-controls > .bx-prev{}
-.bx-wrapper > .bx-controls > .bx-next{}
-.bx-wrapper > .bx-pager{}
-.bx-wrapper > .bx-pager > .bx-pager-item{}
-.bx-wrapper > .bx-pager > .bx-pager-item a{}
+.visual{width: 100%; height: auto;}
+/*swiper.css 수정*/
 
 /*추천게임*/
-.info{width: 1180px; height: 362px; margin: 100px auto;}
+.info{width: 1180px; height: 362px; margin: 50px auto;}
 .info > .title{width: 100%; height: auto; margin-bottom: 30px;}
 .info > .title h2{float: left;}
 .info > .title p{float: right;}

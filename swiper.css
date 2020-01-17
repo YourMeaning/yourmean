@@ -1,0 +1,83 @@
+.swiper-container{
+    position: relative;
+    width: 100%; height: auto;
+    
+}
+
+.swiper-wrapper{
+    position: relative;
+    width: 100%; height: auto;
+    max-height: 560px;
+    
+}
+
+.swiper-slide{
+    text-align:center;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.swiper-slide:nth-of-type(1){background: rgb(18, 19, 39);}
+.swiper-slide:nth-of-type(1) > a > img:nth-of-type(2){position: absolute; left: 20%; top: 0; width: 30%; margin-top: 20px; margin-left: -300px; transition: all 0.2s linear;}
+.swiper-slide:nth-of-type(1).swiper-slide-active > a > img:nth-of-type(2){margin-left: 0;}
+.swiper-slide:nth-of-type(1) > a > iframe{position: absolute; right: 10%; top: 10%; width: 30%; height: 60%;}
+.swiper-slide:nth-of-type(2){background: rgb(0, 0, 0);}
+.swiper-slide:nth-of-type(3){background: rgb(19, 19, 56);}
+.swiper-slide:nth-of-type(4){background: rgb(161, 14, 27);}
+.swiper-slide:nth-of-type(5){background: rgb(4, 5, 15);}
+
+.swiper-slide > a > img{display: block; width: 100%;}
+
+.swiper-button-prev{left: 30px; top: 91%;}
+.swiper-button-next{right: 30px; top: 91%;}
+
+.swiper-pagination{
+    clear: both;
+    position: absolute; left: 50%; bottom: 0;
+    width: 1275px;
+    transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet{
+    float: left;
+    width: 255px; height: 80px; 
+    padding: 10px;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.2); opacity: 1;
+    transition: all 0.3s linear; cursor: pointer;
+}
+
+.swiper-pagination-bullet > .gameName{
+    margin-bottom: 10px;
+    font-size: 13px; font-weight: bold; 
+    text-align: left; letter-spacing: -0.3px; 
+    color: #fff; opacity: .5;
+    transition: all 0.3s linear;
+}
+.swiper-pagination-bullet > .gameDes{
+    white-space: nowrap; word-wrap: normal;  
+    font-size: 18px; font-weight: bold; text-align: left;
+    text-overflow: ellipsis; overflow: hidden;
+    color: #fff; opacity: .7;
+    transition: all 0.3s linear;
+}
+.swiper-pagination-bullet:hover{
+    background: rgba(255, 255, 255, 0.4);
+}
+.swiper-pagination-bullet:hover > .gameDes{
+    opacity: 1;
+}
+
+@media screen and (max-width:1400px){
+    
+    .swiper-button-prev{display: none;}
+    .swiper-button-next{display: none;}
+
+    .swiper-pagination{bottom: 10px; width: 230px;}
+    .swiper-pagination-bullet{width: 42px; height: 6px; margin-right: 5px; padding: 0;}
+    .swiper-pagination-bullet:nth-of-type(5){margin-right: 0;}
+    .swiper-pagination-bullet .gameName{display: none;}
+    .swiper-pagination-bullet .gameDes{display: none;}
+    
+    
+}

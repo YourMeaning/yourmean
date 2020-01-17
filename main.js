@@ -27,6 +27,8 @@ $(document).ready(function(){
     
     //전체게임 뷰타입 바꾸기
     $('.viewtype > i').on('click', function(){
+        docHeight = $(document).height();
+        posFooter = $('#footer').offset().top;
         $(this).addClass('on').siblings().removeClass('on');
     });
     
@@ -67,6 +69,8 @@ $(document).ready(function(){
         $('label').parent('li').removeClass('on');
         $(this).parent('li').addClass('on');
         $('.mobileMore').remove();
+        docHeight = $(document).height();
+        posFooter = $('#footer').offset().top;
         var i = $('.filter > li > label').index(this);
         
         if(i == 0){

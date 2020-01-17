@@ -20,10 +20,11 @@
 <!--    메인 제이쿼리-->
     <script src="main.js"></script>
     
-<!--    bxSlider-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="bxSlider.js"></script>
+<!--    Swiper-->
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" href="swiper.css">
+    <script src="swiper.min.js"></script>
+    <script src="swiper.js"></script>
     
     
 </head>
@@ -162,24 +163,71 @@
     
     <section class="visual">
         
-        <ul class="bxslider">
-            <li><img src="img/slider/df.png" alt></li>
-            <li><img src="img/slider/kart.png" alt></li>
-            <li><img src="img/slider/bf.jpg" alt></li>
-            <li><img src="img/slider/csonline.png" alt></li>
-            <li><img src="img/slider/counterside.jpg" alt></li>
-            <li><img src="img/slider/sky.jpg" alt></li>
-        </ul>
-        
-        <div id="bx-pager">
-            <a data-slide-index="0" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
-            <a data-slide-index="1" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
-            <a data-slide-index="2" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
-            <a data-slide-index="3" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
-            <a data-slide-index="4" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
-            <a data-slide-index="5" href="">던전앤파이터<br><span>여귀검사 진각성,100레벨 업데이트</span></a>
+        <div class="swiper-container">
+            
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/slider/df.png" alt>
+                        <img src="img/slider/df_text.png" alt>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/o6JdSmbx4nc?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/slider/kart.png" alt>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/slider/bf.jpg" alt>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/slider/csonline.png" alt>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/slider/counterside.jpg" alt>
+                    </a>
+                </div>
+                
+<!--                네비-->
+                <div class="swiper-button-prev">
+                    
+                </div>
+                <div class="swiper-button-next">
+                    
+                </div>
+                
+<!--                페이징-->
+                <div class="swiper-pagination">
+                    <div class="swiper-pagination-bullet">
+                        <div class="gameName">던전앤파이터</div>
+                        <div class="gameDes">여귀검사 진각성, 100레벨 업데이트</div>
+                    </div>
+                    <div class="swiper-pagination-bullet">
+                        <div class="gameName">카트라이더</div>
+                        <div class="gameDes">가장 완벽한 카트바디의 귀환 파라곤X</div>
+                    </div>
+                    <div class="swiper-pagination-bullet">
+                        <div class="gameName">버블파이터</div>
+                        <div class="gameDes">좀비대전 Origin 업데이트</div>
+                    </div>
+                    <div class="swiper-pagination-bullet">
+                        <div class="gameName">카운터스트라이크</div>
+                        <div class="gameDes">2020년 신규 에픽 무기 파천화룡포</div>
+                    </div>
+                    <div class="swiper-pagination-bullet">
+                        <div class="gameName">카운터사이드</div>
+                        <div class="gameDes">카운터사이드 사전등록 진행 중!</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
         
     </section>
     
