@@ -1,44 +1,48 @@
-*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nanum Gothic'; color: #17191d}
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nanum Gothic'; color: #17191d;}
 ul, ol, li{list-style: none}
 a{text-decoration: none}
 input,button{border: none;}
 .cf::after{content: ''; display: block; clear: both}
 body{position: relative; background: #f8f9fa;}
 
-
-
 /*헤더*/
 #header{width: 100%;}
 #header > .gnbWrapper{position: relative; height: 62px;}
 #header > .gnbWrapper > .gnbBar > .gnbLeft{float: left; width: 95px; height: 62px; padding: 22px 20px;}
 #header > .gnbWrapper > .gnbBar > .gnbLeft a{display: flex; justify-content: space-between;}
-#header > .gnbWrapper > .gnbBar > .gnbLeft a *{line-height: 14px;}
+#header > .gnbWrapper > .gnbBar > .gnbLeft a *{font-weight: bold; line-height: 14px;}
 
 #header > .gnbWrapper > .gnbBar > .gnbLogo{position: absolute; width: 180px; left: 50%; transform: translate(-50%);}
 
 #header > .gnbWrapper > .gnbBar > .gnbRight{float: right; display: flex; justify-content: space-between; padding: 20px;}
 #header > .gnbWrapper > .gnbBar > .gnbRight *{margin-right: 20px;}
 #header > .gnbWrapper > .gnbBar > .gnbRight .gnbPc span{margin-right: 0px; font-weight: bold; color: #9fa1a7}
-#header > .gnbWrapper > .gnbBar > .gnbRight .gnbLogin{margin-right: 0px; padding: 5px 15px; border: 1.5px solid black; border-radius: 30px; transform: translate(0,-5px); font-weight: bold; transition: all 0.2s linear;}
+#header > .gnbWrapper > .gnbBar > .gnbRight .gnbLogin{margin-right: 0px; padding: 5px 15px; border: 1.5px solid black; border-radius: 30px; transform: translate(0,-5px); font-weight: bold; transition: 0.2s linear; transition-property: border-color,background,color;}
 #header > .gnbWrapper > .gnbBar > .gnbRight .gnbLogin:hover{border-color: #07f; background: #07f; color: #fff;}
 
 #header > .gnbWrapper > .gnbMenu{position: fixed; display: none; left: 0px; top: 0px; width: 440px; height: 100%; margin-left: -440px; background: #fff; z-index: 100; transition: all 0.2s;}
 #header > .gnbWrapper > .gnbMenu > .gnbTop{padding: 20px; border-bottom: 1px solid rgba(159, 161, 167, 0.4);}
 #header > .gnbWrapper > .gnbMenu > .gnbTop .gnbMenuClose i{display: block; width: 23px; height: 23px; font-size: 23px; text-align: center;}
 
-#header > .gnbWrapper > .gnbMenu > .gnbContent{width: 100%; height: calc(100% - 243px); padding: 20px;}
+#header > .gnbWrapper > .gnbMenu > .gnbContent{width: 100%; height: calc(100% - 243px); padding: 20px; overflow-y: scroll;}
 #header > .gnbWrapper > .gnbMenu > .gnbContent > .gnbContentTop {width: 100%; height: 20px;}
 #header > .gnbWrapper > .gnbMenu > .gnbContent > .gnbContentTop > .gnbViewType{float: left;}
 #header > .gnbWrapper > .gnbMenu > .gnbContent > .gnbContentTop > .gnbViewType input{display: none;}
 #header > .gnbWrapper > .gnbMenu > .gnbContent > .gnbContentTop > .gnbViewType label{position: relative; margin-right: 20px; font-size: 14px; font-weight: bold; color: #9fa1a7; cursor: pointer;}
 #header > .gnbWrapper > .gnbMenu > .gnbContent > .gnbContentTop > .gnbViewType input:checked+label{color: #17191d;}
 #header > .gnbWrapper > .gnbMenu > .gnbContent > .gnbContentTop > .gnbViewType input:checked+label::after{content: ''; display: block; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background: #17191d;}
-#header > .gnbWrapper > .gnbMenu > .gnbContent > .gnbContentTop > .help{display: block; margin-top: -5px; padding: 5px 10px; border: 2px solid #9fa1a7; float: right; font-size: 12px; font-weight: bold; color: #9fa1a7;}
-#header > .gnbWrapper > .gnbMenu > .gnbContent .gnbList{float: left; width: 190px; margin-right: 20px; margin-top: 20px;}
-#header > .gnbWrapper > .gnbMenu > .gnbContent .gnbList:last-of-type{margin-right: 0;}
+#header > .gnbWrapper > .gnbMenu > .gnbContent > .gnbContentTop > .help{display: block; margin-top: -5px; padding: 5px 10px; border: 2px solid #9fa1a7; float: right; font-size: 12px; font-weight: bold; color: #9fa1a7; transition: 0.3s linear; transition-property: background, color;}
+#header > .gnbWrapper > .gnbMenu > .gnbContent > .gnbContentTop > .help:hover{background: #9fa1a7; color: #fff;}
+#header > .gnbWrapper > .gnbMenu > .gnbContent .gnbList{float: left; width: 180px; margin-right: 10px; margin-top: 20px;}
+#header > .gnbWrapper > .gnbMenu > .gnbContent .gnbList:nth-of-type(3n){margin-right: 0;}
+#header > .gnbWrapper > .gnbMenu > .gnbContent .gnbList.mobileGame{display: none;}
 #header > .gnbWrapper > .gnbMenu > .gnbContent .gnbList h3{margin-bottom: 10px; padding-top: 20px;}
 #header > .gnbWrapper > .gnbMenu > .gnbContent .gnbList ul li{margin-bottom: 2px;}
-#header > .gnbWrapper > .gnbMenu > .gnbContent .gnbList ul li a{font-size: 12px; letter-spacing: -0.3px; color: #838383}
+#header > .gnbWrapper > .gnbMenu > .gnbContent .gnbList ul li a{font-size: 12px; letter-spacing: -0.3px; color: #838383; transition: 0.3s linear; transition-property: color;}
+#header > .gnbWrapper > .gnbMenu > .gnbContent .gnbList ul li a:hover{color: #07f;}
+
+
+
 
 #header > .gnbWrapper > .gnbMenu > .gnbBot{position: absolute; bottom: 0px; left: 0; width: 100%; height: 180px; background: #222426;}
 #header > .gnbWrapper > .gnbMenu > .gnbBot > .gnbService{width:100%; height: 180px; padding: 20px;}
@@ -62,26 +66,26 @@ body{position: relative; background: #f8f9fa;}
 .info > .title p{float: right;}
 
 .info > .gameRecommend{float: left; margin-right: 20px; background: #fff;}
-.info > .gameRecommend > li{position: relative; float: left; width: 130px; height: 300px; margin-right: 20px; transition: all 0.2s linear; cursor: pointer;}
+.info > .gameRecommend > li{position: relative; float: left; width: 130px; height: 300px; margin-right: 20px; transition: 0.2s linear; transition-property: box-shadow; cursor: pointer;}
 .info > .gameRecommend > li:hover{box-shadow: 0px 0px 10px 1px #cccaca;}
 .info > .gameRecommend > li:last-of-type{margin-right: 0px;}
 
 .info > .gameRecommend > li .gameImg{display: block; margin-bottom: 10px; overflow: hidden;}
-.info > .gameRecommend > li .gameImg img{display: block; width: 130px; height: 163px; transition: all 0.2s linear;}
+.info > .gameRecommend > li .gameImg img{display: block; width: 130px; height: 163px; transition: 0.2s linear; transition-property: transform;}
 .info > .gameRecommend > li:hover .gameImg img{transform: scale(1.1);}
 .info > .gameRecommend > li .recommend{display: block; width: 32px; height: 16px; margin-left: 10px; margin-bottom: 10px; padding: 2px 5px;; border-radius: 20px; font-size: 10px; font-weight: bold; color: #fff; background: #00dbd3;}
 .info > .gameRecommend > li .gameName{display: block; font-size: 14px; font-weight: bold; margin-left: 10px; margin-bottom: 10px;}
 .info > .gameRecommend > li .gameReason{position: absolute; left: 10px; bottom: 10px; display: block; font-size: 12px; color: #9fa1a7;}
 
 /*로그인*/
-.info > .login{float: left; width: 430px; height: 300px; padding-left: 40px; background: #fff;}
-.info > .login > .nexon{display: block; width: 350px; height: 60px; margin-bottom: 10px; text-align: center; font-size: 15px; font-weight: bold; line-height: 60px; color: #fff; background: #17191d; transition: all 0.2s linear;}
+.info > .login{float: left; width: 430px; height: 300px; padding-left: 40px; padding-top: 40px; background: #fff;}
+.info > .login > .nexon{display: block; width: 350px; height: 60px; margin-bottom: 10px; text-align: center; font-size: 15px; font-weight: bold; line-height: 60px; color: #fff; background: #17191d; transition: 0.2s linear; transition-property: border-color, background, color;}
 .info > .login > .nexon:hover{border-color: #07f; background: #07f; color: #fff;}
 
 .info > .login > .etc{width: 350px; margin-bottom:10px;}
-.info > .login > .etc .pcLogin{float: left; display: block; width: 170px; height: 50px; margin-right: 10px; line-height: 50px; text-align: center; font-weight: bold; color: #fff; background: #4a4e57; transition: all 0.2s linear;}
+.info > .login > .etc .pcLogin{float: left; display: block; width: 170px; height: 50px; margin-right: 10px; line-height: 50px; text-align: center; font-weight: bold; color: #fff; background: #4a4e57; transition: 0.2s linear; transition-property: border-color, background, color;}
 .info > .login > .etc .pcLogin:hover{border-color: #07f; background: #07f; color: #fff;}
-.info > .login > .etc .qrLogin{float: left; display: block; width: 170px; height: 50px; line-height: 50px; text-align: center; font-weight: bold; color: #fff; background: #4a4e57; transition: all 0.2s linear;}
+.info > .login > .etc .qrLogin{float: left; display: block; width: 170px; height: 50px; line-height: 50px; text-align: center; font-weight: bold; color: #fff; background: #4a4e57; transition: 0.2s linear; transition-property: border-color, background, color;}
 .info > .login > .etc .qrLogin:hover{border-color: #07f; background: #07f; color: #fff;}
 
 .info > .login > .other{width: 350px; height: 40px; margin-bottom: 10px; padding: 0 63px; text-align: center; background: #f8f9fa;}
@@ -99,8 +103,25 @@ body{position: relative; background: #f8f9fa;}
 .info > .login > .tooltip a{margin-right: 5px; line-height: 40px; font-size: 11px; color: #fff;}
 .info > .login > .tooltip i{line-height: 40px; font-size: 11px; color: #fff; cursor: pointer;}
 
+/*  info 1200px 이하  */
+@media screen and (max-width:1200px){
+    
+    .info{width: 980px;}
+
+    .info > .gameRecommend > li{width: 146.666px;}
+    .info > .gameRecommend > li:nth-of-type(3){margin-right: 0px;}
+    .info > .gameRecommend > li:nth-of-type(4){display: none;}
+    .info > .gameRecommend > li:nth-of-type(5){display: none;}
+
+    .info > .gameRecommend > li .gameImg img{width: 146.666px;}
+    
+    .info > .login{width: 480px;padding-left: 65px;}
+}
+
+
+
 /*전체게임*/
-.allGame{width: 1180px; margin: 0 auto 200px;}
+.allGame{width: 1180px; margin: 0 auto 200px; overflow: hidden;}
 .allGame > h2{float: left; margin-bottom: 30px;}
 
 .allGame > .viewtype{float: left; margin-left: 10px;}
@@ -129,16 +150,16 @@ body{position: relative; background: #f8f9fa;}
 /*전체게임 > PC게임*/
 
 .allGame > .pcGame{width: 1200px; height: auto; margin: 0 auto;}
-.allGame > .pcGame h3{display: inline-block; margin-right: 20px; font-size: 20px; margin-bottom: 20px;}
-.allGame > .pcGame a{display: inline-block; font-size: 20px; font-weight: bold; color: #c7c8cc;}
+.allGame > .pcGame > h3{display: inline-block; margin-right: 20px; font-size: 20px; margin-bottom: 20px;}
+.allGame > .pcGame > a{display: inline-block; font-size: 20px; font-weight: bold; color: #c7c8cc;}
 
 /*카드뷰*/
 .allGame > .pcGame > .pcCardView{width: 100%;}
-.allGame > .pcGame > .pcCardView > .game{float: left; width: 280px; height: 340px; margin-right: 20px; margin-bottom: 50px; background: #fff; overflow: hidden; transition: all 0.2s linear;}
+.allGame > .pcGame > .pcCardView > .game{float: left; width: 280px; height: 340px; margin-right: 20px; margin-bottom: 50px; background: #fff; overflow: hidden; transition: 0.2s linear; transition-property: box-shadow;}
 .allGame > .pcGame > .pcCardView > .game:hover{box-shadow: 0px 0px 10px 1px #cccaca;}
 
 .allGame > .pcGame > .pcCardView > .game .gameImg{display: block; width: 280px; height: 185px; margin-bottom: 20px; overflow: hidden;}
-.allGame > .pcGame > .pcCardView > .game .gameImg img{display: block; width: 280px; transition: all 0.2s linear;}
+.allGame > .pcGame > .pcCardView > .game .gameImg img{display: block; width: 280px; transition: 0.2s linear; transition-property: transform;}
 .allGame > .pcGame > .pcCardView > .game .gameImg img:hover{transform: scale(1.1)}
 
 .allGame > .pcGame > .pcCardView > .game .gameImgList{display: none;}
@@ -153,7 +174,7 @@ body{position: relative; background: #f8f9fa;}
 .allGame > .pcGame > .pcCardView > .game .gameUpdate{float: right; width: auto; margin-right: 20px; padding: 0 5px; border: 1px solid #2be283; border-radius: 8px; font-size: 12px; color: #fff; background: #2be283;}
 .allGame > .pcGame > .pcGameNone{padding: 30px 0;}
 .allGame > .pcGame > .pcGameNone p{display: block; width: 300px; margin: 0 auto; font-size: 14px; text-align: center; color: #9fa1a7;}
-.allGame > .pcGame > .pcGameNone .pcGameReset{width: 150px; margin-top: 20px; padding: 10px 0; border: 2px solid #9fa1a7; font-weight: bold; cursor: pointer; transition: all 0.3s linear;}
+.allGame > .pcGame > .pcGameNone .pcGameReset{width: 150px; margin-top: 20px; padding: 10px 0; border: 2px solid #9fa1a7; font-weight: bold; cursor: pointer; transition: 0.3s linear; transition-property: background, color;}
 .allGame > .pcGame > .pcGameNone .pcGameReset:hover{background: #9fa1a7; color: #fff;}
 
 /*리스트뷰*/
@@ -163,16 +184,17 @@ body{position: relative; background: #f8f9fa;}
 .allGame > .pcGame > .pcListView > .game > a > .gameImg{display: none;}
 .allGame > .pcGame > .pcListView > .game > a > .gameImgList{display: inline-block; margin-right: 10px; vertical-align: middle;}
 .allGame > .pcGame > .pcListView > .game > a > .gameImgList img{width: 32px; border-radius: 16px;}
-.allGame > .pcGame > .pcListView > .game > a > .gameName{vertical-align: middle; font-size: 16px; font-weight: bold; letter-spacing: -1px;}
+.allGame > .pcGame > .pcListView > .game > a > .gameName{vertical-align: middle; font-size: 16px; font-weight: bold; letter-spacing: -1px; transition: 0.3s linear; transition-property: color;}
+.allGame > .pcGame > .pcListView > .game:hover > a > .gameName{color: #07f;}
 .allGame > .pcGame > .pcListView > .game > a > .gameDes{display: none;}
 .allGame > .pcGame > .pcListView > .game > a > .gameCate{display: none;}
 .allGame > .pcGame > .pcListView > .game > a > .gameUpdate{padding: 0 5px; border: 1px solid #2be283; border-radius: 8px; font-size: 12px; color: #fff; background: #2be283;}
 
 /*전체게임 > 모바일게임*/
 .allGame > .mobileGame{width: 1200px; height: auto; margin: 0 auto;}
-.allGame > .mobileGame h3{font-size: 20px; margin-bottom: 20px;}
+.allGame > .mobileGame > h3{font-size: 20px; margin-bottom: 20px;}
 .allGame > .mobileGame > .mobileCardView{width: 100%; height: 100%;}
-.allGame > .mobileGame > .mobileCardView > .game{position: relative; float: left; width: 280px; height: 120px; margin-right: 20px; margin-bottom: 20px; padding: 17px 17px; background: #fff; transition: all 0.2s linear;}
+.allGame > .mobileGame > .mobileCardView > .game{position: relative; float: left; width: 280px; height: 120px; margin-right: 20px; margin-bottom: 20px; padding: 17px 17px; background: #fff; transition: 0.2s linear; transition-property: box-shadow;}
 .allGame > .mobileGame > .mobileCardView > .game:hover{box-shadow: 0px 0px 10px 1px #cccaca;}
 
 .allGame > .mobileGame > .mobileCardView > .game .gameImg{float: left; margin-right: 17px;}
@@ -195,7 +217,7 @@ body{position: relative; background: #f8f9fa;}
 .allGame > .mobileGame > .mobileListView > .game .gameImg:hover+.gameName{color: #07f}
 .allGame > .mobileGame > .mobileListView > .game .gameImg img{display: block; width: 32px; border-radius: 8px;}
 
-.allGame > .mobileGame > .mobileListView > .game .gameName{display: inline-block; margin-top: 4px; font-weight: bold; letter-spacing: -1px; transition: all 0.2s linear;}
+.allGame > .mobileGame > .mobileListView > .game .gameName{display: inline-block; margin-top: 4px; font-weight: bold; letter-spacing: -1px; transition: 0.2s linear; transition-property: color;}
 .allGame > .mobileGame > .mobileListView > .game .gameName:hover{color: #07f}
 
 .allGame > .mobileGame > .mobileListView > .game .gameDes{display: none;}
@@ -209,15 +231,41 @@ body{position: relative; background: #f8f9fa;}
 
 .allGame > .mobileGame > .mobileGameNone{padding: 30px 0;}
 .allGame > .mobileGame > .mobileGameNone p{display: block; width: 300px; margin: 0 auto; font-size: 14px; text-align: center; color: #9fa1a7;}
-.allGame > .mobileGame > .mobileGameNone > .mobileGameReset{width: 150px; margin-top: 20px; padding: 10px 0; border: 2px solid #9fa1a7; font-weight: bold; cursor: pointer; transition: all 0.3s linear;}
+.allGame > .mobileGame > .mobileGameNone > .mobileGameReset{width: 150px; margin-top: 20px; padding: 10px 0; border: 2px solid #9fa1a7; font-weight: bold; cursor: pointer; transition: 0.3s linear; transition-property: background, color;}
 .allGame > .mobileGame > .mobileGameNone > .mobileGameReset:hover{background: #9fa1a7; color: #fff;}
-.allGame > .mobileGame > .mobileMore{width: 150px; margin: 20px auto 0; padding: 10px 0; border: 2px solid #9fa1a7; font-weight: bold; text-align: center; cursor: pointer; transition: all 0.3s linear;}
+.allGame > .mobileGame > .mobileMore{width: 150px; margin: 20px auto 0; padding: 10px 0; border: 2px solid #9fa1a7; font-weight: bold; text-align: center; cursor: pointer; transition: 0.3s linear; transition-property: background, color;}
 .allGame > .mobileGame > .mobileMore:hover{background: #9fa1a7; color: #fff;}
+
+/*  info 1200px 이하  */
+@media screen and (max-width:1200px){
+    
+    /*전체게임*/
+    .allGame{width: 980px;}
+    .allGame > .filter{width: 980px;}
+    /*전체게임 > PC게임*/
+    .allGame > .pcGame{width: 1000px;}
+    /*카드뷰*/
+    .allGame > .pcGame > .pcCardView > .game{width: 313.333px;}
+    .allGame > .pcGame > .pcCardView > .game .gameImg{width: 313.333px;}
+    .allGame > .pcGame > .pcCardView > .game .gameImg img{width: 313.333px;}
+    .allGame > .pcGame > .pcCardView > .game .gameDes{width: calc(100% - 40px);}
+    
+    /*리스트뷰*/
+    .allGame > .pcGame > .pcListView > .game{width: 313.333px;}
+
+    /*전체게임 > 모바일게임*/
+    .allGame > .mobileGame{width: 1000px;}
+    .allGame > .mobileGame > .mobileCardView > .game{width: 313.333px;}
+    /*리스트뷰*/
+    .allGame > .mobileGame > .mobileListView > .game{width: 313.333px;}
+    
+}
+
 
 /*네비게이션*/
 .navi{display: none; position: fixed; right: 20px; bottom: 20px;}
 .navi.scrollBot{position: absolute; right: 20px; bottom: 250px;}
-.navi > a{display: block; width: 110px; height: 36px; margin-bottom: 2px; padding: 8px 0 0 7px; box-shadow: 0px 0px 10px 1px #cccaca; font-size: 14px; background: #fff; transition: all 0.3s linear;}
+.navi > a{display: block; width: 110px; height: 36px; margin-bottom: 2px; padding: 9px 0 0 7px; box-shadow: 0px 0px 10px 1px #cccaca; font-size: 14px; background: #fff; transition: 0.3s linear; transition-property: background;}
 .navi > a:nth-of-type(2){margin-bottom: 5px;}
 .navi > a:nth-of-type(3){background: #f8f9fa; border: 2px solid #9fa1a7}
 .navi > a:hover{background: #07f}
@@ -226,11 +274,16 @@ body{position: relative; background: #f8f9fa;}
 .navi > a:nth-of-type(3):hover{border-color: #07f; background-color: #f8f9fa;}
 .navi > a:nth-of-type(3):hover i{color: #07f;}
 .navi > a:nth-of-type(3):hover span{color: #07f;}
-.navi > a > i{width: 20px; font-size: 16px; text-align: center; color: #9fa1a7; transition: all 0.3s linear;}
-.navi > a > span{color: #9fa1a7; transition: all 0.3s linear;}
-.navi > .naviPc i{font-size: 14px;}
+.navi > a > i{width: 20px; font-size: 16px; text-align: center; color: #9fa1a7; transition: 0.3s linear; transition-property: color;}
+.navi > a.naviPc > i{font-size: 14px;}
+.navi > a > span{color: #9fa1a7; transition: 0.3s linear; transition-property: color;}
 
-
+/*  1600px 네비 아이콘만 남기기*/
+@media screen and (max-width:1600px){
+    .navi > a{width: 34px;}
+    .navi > a:nth-of-type(3){padding-left: 5px;}
+    .navi > a > span{display: none;}
+}
 
 /*푸터 시작*/
 #footer{width: 100%; background: #222426;}
@@ -240,15 +293,19 @@ body{position: relative; background: #f8f9fa;}
 #footer > .footer_top > .notice p:hover{text-decoration: underline;}
 #footer > .footer_top > .sns{display: block; float: right;}
 #footer > .footer_top > .sns li{float: left; margin-left: 20px;}
-#footer > .footer_top > .sns li i{display: block; width: 19px; height: 19px; color: #fff;}
+#footer > .footer_top > .sns li i{display: block; width: 19px; height: 19px; color: #fff; transition: 0.3s linear; transition-property: color;}
+#footer > .footer_top > .sns li i:hover{color: #07f;}
 
 #footer > .footer_bot{width: 100%; padding: 20px 40px;}
 #footer > .footer_bot > .footer_nav{display: flex; flex-wrap: wrap; width: 80%; margin-bottom: 10px;}
 #footer > .footer_bot > .footer_nav li{position: relative; margin-right: 30px;}
 #footer > .footer_bot > .footer_nav li::before{content: ''; display: block; position: absolute; right: -15px; top: 6px; width: 1px; height: 10px; background: rgba(248,249,250,.5);}
-#footer > .footer_bot > .footer_nav li a{font-size: 12px; color: rgba(248,249,250,0.7);}
+#footer > .footer_bot > .footer_nav li a{font-size: 12px; color: rgba(248,249,250,0.7); transition: 0.3s linear; transition-property: color;}
+#footer > .footer_bot > .footer_nav li a:hover{color: #07f}
+#footer > .footer_bot > .footer_nav li a.personal{font-weight: bold;}
 #footer > .footer_bot > .address{font-size: 11px; font-style: normal; line-height: 20px; color: rgba(248,249,250,.3);}
 #footer > .footer_bot > .copyright{margin-bottom: 10px; font-size: 11px; line-height: 20px; color: rgba(248,249,250,.3);}
 #footer > .footer_bot > .logo img{display: inline-block; width: 68px; height: 23px;}
+
 
 

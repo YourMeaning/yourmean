@@ -20,6 +20,17 @@ $(document).ready(function(){
         $('.gnbMenuBack').remove();
     });
     
+    //gnb pc게임/모바일게임 전환
+    $('.gnbViewType > input').eq(0).on('click', function(){
+        $('.gnbList').hide();
+        $('.gnbList.pcGame').show();
+    });
+    $('.gnbViewType > input').eq(1).on('click', function(){
+        $('.gnbList').hide();
+        $('.gnbList.mobileGame').show();
+    });
+    
+    
     //툴팁 없어지기
     $('.tooltip>i').on('click', function(){
         $(this).parents('.tooltip').hide();
@@ -41,7 +52,7 @@ $(document).ready(function(){
         $('.pcGame > a').css('display','inline');
         if($('.mobileGame > div').last().hasClass('mobileMore')==false &&
           $('.filter > li').first().hasClass('on')){
-            $('.mobileGame').append('<div class=mobileMore>더보기</div>');
+            $('.allGame .mobileGame').append('<div class=mobileMore>더보기</div>');
             moreCount = 0;
             $('.mobileGame .game').each(function(){
                 if(moreCount <= 11){
@@ -76,7 +87,7 @@ $(document).ready(function(){
         if(i == 0){
             $('.game').show();
             if($('.pcGame > a').css('display')!='none'){
-                $('.mobileGame').append('<div class=mobileMore>더보기</div>');
+                $('.allGame .mobileGame').append('<div class=mobileMore>더보기</div>');
                 moreCount = 0;
                 $('.mobileGame .game').each(function(){
                     if(moreCount <= 11){
@@ -189,7 +200,7 @@ $(document).ready(function(){
                 }
                 moreCount++;
             });
-            $('.mobileGame').append('<div class=mobileMore>더보기</div>');
+            $('.allGame .mobileGame').append('<div class=mobileMore>더보기</div>');
         };
     });
     $(document).on('click','.mobileGameReset',function(){
@@ -207,7 +218,7 @@ $(document).ready(function(){
                 }
                 moreCount++;
             });
-            $('.mobileGame').append('<div class=mobileMore>더보기</div>');
+            $('.allGame .mobileGame').append('<div class=mobileMore>더보기</div>');
         };
     });
     
@@ -223,7 +234,7 @@ $(document).ready(function(){
             moreCount++;
         });
 
-        $('.mobileGame').append('<div class=mobileMore>더보기</div>');
+        $('.allGame .mobileGame').append('<div class=mobileMore>더보기</div>');
 
         $(Document).on('click', '.mobileMore', function(){
             $(this).remove();
@@ -238,12 +249,13 @@ $(document).ready(function(){
     var docHeight = $(document).height();
     var posFooter = $('#footer').offset().top;
     var windowHeight = $(window).height();
-    $(window).on('resize', function(){
-        windowHeight = $(window).height();
-    });
     
     $(window).on('scroll', function(){
         var scroll = $(window).scrollTop();
+        posVisual = $('.visual').offset().top;
+        docHeight = $(document).height();
+        posFooter = $('#footer').offset().top;
+        windowHeight = $(window).height();
         if(scroll <= posVisual){
             $('.navi').fadeOut();
         } else if(scroll >= posVisual && scroll + windowHeight <= posFooter){
@@ -253,5 +265,8 @@ $(document).ready(function(){
             $('.navi').addClass('scrollBot');
         }
     });
+    
+    
+    
     
 });

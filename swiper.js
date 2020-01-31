@@ -20,11 +20,6 @@ $(document).ready(function(){
             clickable : true,
         },
         
-//        init:function(){
-//            swiper.slideChange(function(){
-//                $('.swiper-slide iframe').stopVideo();
-//            })
-//        },
     });
     
     
