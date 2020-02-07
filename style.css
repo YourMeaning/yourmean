@@ -1,0 +1,21 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nanum Gothic'; color: #17191d;}
+ul, ol, li{list-style: none}
+a{text-decoration: none}
+.cf::after{content: ''; display: block; clear: both}
+
+#header{width: 100%; height: 100px; background: #eee;}
+
+#content_1{width: 100%; height: auto; margin: 0 auto;}
+#content_1 > ul{width: 100%; max-width: 1180px; margin: 0 auto;}
+#content_1 > ul > h2{margin: 50px 0; text-align: center;}
+#content_1 > ul > li{position: relative; width: 100%; height: 600px; margin: 50px 0; background: #eee;}
+#content_1 > ul > li > .imgBox{display: block; width: 100%; height: calc(100% - 200px); overflow-y: scroll}
+#content_1 > ul > li > .imgBox a img{display: block; width: 100%;}
+#content_1 > ul > li > .textBox{width: 100%; height: auto; padding: 30px;}
+#content_1 > ul > li > .textBox h3{margin-bottom: 10px; color: #d8bf6c;}
+#content_1 > ul > li > .gitBox{position: absolute; bottom: 10px; left: 30px; width: auto; padding: 5px; border: 2px solid #d8bf6c; line-height: 20px;}
+#content_1 > ul > li > .gitBox a{}
+
+
+#footer{width: 100%; height: 150px; background: #eee;}
+#footer p{padding: 50px 0; text-align: center;}
