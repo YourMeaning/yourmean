@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>한국대학교 수강신청시스템</title>
+<!--    스타일-->
     <link rel="stylesheet" href="sub_style.css">
+<!--    js 1.12.4-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!--    제이쿼리-->
+    <script src="sub.js"></script>    
 </head>
 <body>
     
 <!--    헤더(gnb)-->
     <header id="header">
-        <ul class="gnb">
+        <ul class="nav">
             <li>공지사항</li>
             <li>개설교과목조회</li>
             <li>수강신청</li>
@@ -59,20 +64,170 @@
         </table>
     </section>
 <!--    공지사항-->
-    <section id="notice">
-        
+    <section id="notice" class="content">
+        <h2>공지사항</h2>
+        <ul class="notice_list">
+            <li>1. (긴급)코로나-19 바이러스로 인한 개강일 연기 안내</li>
+            <li>2. 수강신청일 준수 안내</li>
+            <li>3. 한국대학교 수강신청시스템 오픈</li>
+        </ul>
+        <ul class="board">
+            <li>
+                한국대학교 학생들의 건강과 안전을 위해<br>
+                기존의 3월 2일에서 2주간 연기되어<br>
+                개강일이 <b>3월 16일(월)</b>로 변경되었습니다.<br><br>
+
+                학생여러분은 코로나 예방수칙을 준수해 주시기 바라며,<br>
+                개강 연기로 인해 변경되는 학사 일정은<br>
+                홈페이지의 공지사항을 참고해 주시기 바랍니다.<br><br>
+
+                감사합니다.<br>
+                <img src="%EC%BD%94%EB%A1%9C%EB%82%9819.jpg" alt="코로나 19 예방수칙">
+            </li>
+            <li>
+                한국대학교 2020학년 1학기 수강신청 기간은<br>
+                2020-02-07 10:00 ~ 2020-02-08 22:00 이며<br>
+                수강신청 기한을 준수하여 신청 부탁드립니다.<br><br>
+
+                수강신청 기한 내 정원초과되지 않은 강의에 한하여<br>
+                추가 수강신청 기간 내 재신청 가능하며, 추가 수강신청 기간은<br>
+                2020-02-17 10:00 부터 정정 가능합니다.<br><br>
+
+                감사합니다.
+            </li>
+            <li>
+                2020년 1학기 부터 새롭게 리뉴얼 된 한국대학교 수강신청 시스템을 통하여<br>
+                수강신청이 가능합니다.<br><br>
+
+                해당 페이지 사용 중 발생되는 문의사항은 02-123-4567 로 문의해주시기 바랍니다.<br><br>
+
+                감사합니다.
+            </li>
+        </ul>
     </section>
 <!--    개설교과목조회-->
-    <section id="search">
-        
+    <section id="search" class="content">
+        <h2>개설교과목조회</h2>
+        <div class="filter">
+            <p>학부</p>
+            <select id="major">
+                <option value="1">전체</option>
+                <option value="2">국어국문학과</option>
+                <option value="3">기계공학과</option>
+                <option value="4">수학학과</option>
+                <option value="5">패션디자인과</option>
+            </select>
+            <p>주/야</p>
+            <select id="time">
+                <option value="d">주간</option>
+                <option value="n">야간</option>
+            </select>
+            <p>이수구분</p>
+            <select id="cate">
+                <option value="major">전공</option>
+                <option value="liberal">교양</option>
+            </select>
+            <p>교과목 번호</p>
+            <input type="search" class="search_bar">
+            <input type="submit" class="submit_btn" value="검색">
+        </div>
+        <div class="class_list">
+            <table>
+                <tr>
+                    <td class="list_num">교과목번호</td>
+                    <td>교과목명</td>
+                    <td>학점</td>
+                    <td class="list_cate">이수구분</td>
+                    <td>이론/실습</td>
+                    <td>담당교수</td>
+                    <td>강의시간</td>
+                    <td class="list_daynight">주/야</td>
+                    <td>비고</td>
+                    <td>신청인원</td>
+                    <td>신청</td>
+                    <td class="list_major">학부</td>
+                </tr>
+                <tr>
+                    <td class="list_num">1</td>
+                    <td>국어국문 기초</td>
+                    <td>4</td>
+                    <td class="list_cate">전공</td>
+                    <td>4/0</td>
+                    <td>김학선</td>
+                    <td>월/금 09:00~11:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>5/40</td>
+                    <td>신청</td>
+                    <td class="list_major">국어국문학과</td>
+                </tr>
+                <tr>
+                    <td class="list_num">2</td>
+                    <td>공업수학 기초</td>
+                    <td>4</td>
+                    <td class="list_cate">전공</td>
+                    <td>4/0</td>
+                    <td>최혁진</td>
+                    <td>월/화 10:00~12:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>25/40</td>
+                    <td>신청</td>
+                    <td class="list_major">기계공학과</td>
+                </tr>
+                <tr>
+                    <td class="list_num">3</td>
+                    <td>선형대수학</td>
+                    <td>2</td>
+                    <td class="list_cate">전공</td>
+                    <td>2/0</td>
+                    <td>김한구</td>
+                    <td>월 09:00~11:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>12/40</td>
+                    <td>신청</td>
+                    <td class="list_major">수학학과</td>
+                </tr>
+                <tr>
+                    <td class="list_num">4</td>
+                    <td>영문기초</td>
+                    <td>4</td>
+                    <td class="list_cate">교양</td>
+                    <td>4/0</td>
+                    <td>한경래</td>
+                    <td>수/목 14:00~16:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>35/40</td>
+                    <td>신청</td>
+                    <td class="list_major"></td>
+                </tr>
+                <tr>
+                    <td class="list_num">5</td>
+                    <td>시각디자인</td>
+                    <td>3</td>
+                    <td class="list_cate">전공</td>
+                    <td>3/0</td>
+                    <td>로버트 김</td>
+                    <td>수 13:00~15:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>22/40</td>
+                    <td>신청</td>
+                    <td class="list_major">패션디자인과</td>
+                </tr>
+            </table>
+        </div>
+        <div class="preapplication"></div>
     </section>
 <!--    수강신청-->
-    <section id="application">
-        
+    <section id="application" class="content">
+        <h2>수강신청</h2>
     </section>
 <!--    수강신청내역조회-->
-    <section id="check">
-        
+    <section id="check" class="content">
+        <h2>수강신청내역조회</h2>
     </section>
     
 <!--    푸터-->

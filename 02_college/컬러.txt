@@ -1,4 +1,7 @@
-연두 #75EBD5
-파랑 #8C98FF
-폰트 #606672
-강조 #FF6968
+메인1 연두 #75EBD5
+메인2 파랑 #8C98FF
+기본폰트 #606672
+폰트강조(레드) #FF6968
+
+테두리 그라데이션
+border: 5px solid transparent; border-image: linear-gradient(130deg, #75EBD5 30%, #8C98FF); border-image-slice: 1;
