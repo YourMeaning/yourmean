@@ -26,7 +26,7 @@
         <div class="top">
             <h3>한국대학교</h3>
             <p>2020학년도 1학기 수강신청<br><b>한국민</b>님이 로그인하셨습니다.</p>
-            <button>로그아웃</button>
+            <button onclick="location.href='../index.html'">로그아웃</button>
         </div>
         <table class="user_info">
             <tr>
@@ -63,6 +63,7 @@
             </tr>
         </table>
     </section>
+    
 <!--    공지사항-->
     <section id="notice" class="content">
         <h2>공지사항</h2>
@@ -111,19 +112,21 @@
         <div class="filter">
             <p>학부</p>
             <select id="major">
-                <option value="1">전체</option>
-                <option value="2">국어국문학과</option>
-                <option value="3">기계공학과</option>
-                <option value="4">수학학과</option>
-                <option value="5">패션디자인과</option>
+                <option value="">-</option>
+                <option value="국어국문학과">국어국문학과</option>
+                <option value="기계공학과">기계공학과</option>
+                <option value="수학학과">수학학과</option>
+                <option value="패션디자인과">패션디자인과</option>
             </select>
             <p>주/야</p>
             <select id="time">
+                <option value="all">-</option>
                 <option value="d">주간</option>
                 <option value="n">야간</option>
             </select>
             <p>이수구분</p>
             <select id="cate">
+                <option value="all">-</option>
                 <option value="major">전공</option>
                 <option value="liberal">교양</option>
             </select>
@@ -216,6 +219,104 @@
                     <td>22/40</td>
                     <td>신청</td>
                     <td class="list_major">패션디자인과</td>
+                </tr>
+                <tr>
+                    <td class="list_num">6</td>
+                    <td>C언어 기초</td>
+                    <td>2</td>
+                    <td class="list_cate">교양</td>
+                    <td>1/1</td>
+                    <td>최형식</td>
+                    <td>목 14:00~16:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>40/40</td>
+                    <td>신청</td>
+                    <td class="list_major"></td>
+                </tr>
+                <tr>
+                    <td class="list_num">7</td>
+                    <td>생활체육</td>
+                    <td>3</td>
+                    <td class="list_cate">교양</td>
+                    <td>0/3</td>
+                    <td>김태혁</td>
+                    <td>금 13:00~16:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>8/40</td>
+                    <td>신청</td>
+                    <td class="list_major"></td>
+                </tr>
+                <tr>
+                    <td class="list_num">8</td>
+                    <td>작문기초</td>
+                    <td>3</td>
+                    <td class="list_cate">전공</td>
+                    <td>3/0</td>
+                    <td>황선영</td>
+                    <td>화 13:00~16:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>27/40</td>
+                    <td>신청</td>
+                    <td class="list_major">국어국문학과</td>
+                </tr>
+                <tr>
+                    <td class="list_num">9</td>
+                    <td>기계제도</td>
+                    <td>3</td>
+                    <td class="list_cate">전공</td>
+                    <td>3/0</td>
+                    <td>김선영</td>
+                    <td>월 13:00~16:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>34/40</td>
+                    <td>신청</td>
+                    <td class="list_major">기계공학과</td>
+                </tr>
+                <tr>
+                    <td class="list_num">10</td>
+                    <td>통계학</td>
+                    <td>4</td>
+                    <td class="list_cate">전공</td>
+                    <td>4/0</td>
+                    <td>손승우</td>
+                    <td>수/금 10:00~12:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>16/40</td>
+                    <td>신청</td>
+                    <td class="list_major">수학학과</td>
+                </tr>
+                <tr>
+                    <td class="list_num">11</td>
+                    <td>3D입체 디자인</td>
+                    <td>3</td>
+                    <td class="list_cate">전공</td>
+                    <td>1/2</td>
+                    <td>김혁진</td>
+                    <td>월 09:00~12:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>31/40</td>
+                    <td>신청</td>
+                    <td class="list_major">패션디자인과</td>
+                </tr>
+                <tr>
+                    <td class="list_num">12</td>
+                    <td>근현대문학</td>
+                    <td>3</td>
+                    <td class="list_cate">전공</td>
+                    <td>3/0</td>
+                    <td>황현정</td>
+                    <td>금 14:00~17:00</td>
+                    <td class="list_daynight">주간</td>
+                    <td>-</td>
+                    <td>2/40</td>
+                    <td>신청</td>
+                    <td class="list_major">국어국문학과</td>
                 </tr>
             </table>
         </div>
