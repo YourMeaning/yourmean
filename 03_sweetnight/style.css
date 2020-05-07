@@ -1,0 +1,44 @@
+@font-face { font-family: 'ghanachoco'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'LotteMartHappy'; font-style: normal; font-weight: 400; src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff'); } @font-face { font-family: 'LotteMartHappy'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff') format('woff'); } .lottemarthappy * { font-family: 'LotteMartHappy', sans-serif; }
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nanum Gothic'; color: #000000;}
+ul, ol, li{list-style: none}
+a{text-decoration: none}
+.cf::after{content: ''; display: block; clear: both}
+
+#header{width: 100%; height: 70px; background: #f5f5f5}
+#header .logo{height: 60px; padding: 5px 20px; float: left;}
+#header .logo h2{font-size: 40px; line-height: 60px; font-weight: 300; font-family: 'ghanachoco'; color: #bfbf5a}
+#header .gnb{height: 60px; padding: 5px; float: right;}
+#header .gnb i{margin-right: 10px; padding: 5px; line-height: 50px; font-size: 40px; color: #49010F;}
+
+.content_wrap{width: 100%; height: 100%; background: #E3E36A;}
+
+#visual{position: relative; width: 1200px; height: 600px; margin: 0 auto; background: url(img/08.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;}
+#visual h2{padding: 60px; line-height: 80px; font-size: 62px; font-family: 'LotteMartHappy'; color: #f5f5f5;}
+#visual h2.right{position: absolute; right: 0; bottom: 0;}
+#visual h2 span{font-family: 'LotteMartHappy'; color: #bfbf5a;}
+
+
+#info{width: 1200px; margin: 0 auto; background: #eee;}
+#info .left{position: relative; float: left; width: 600px; height: 300px; padding: 80px;}
+#info .left::after{content: ''; position: absolute; right: 0; top: 10%; width: 1px; height: 80%; background: #222;}
+#info .left h3{font-size: 36px; text-align: center; margin-bottom: 20px; color: #bfbf5a;}
+#info .left p{line-height: 30px; font-size: 22px; text-align: center;}
+#info .right{float: right; width: 600px; height: 300px; padding: 80px;}
+#info .right p{line-height: 30px; font-size: 22px;}
+#info .right a{position: relative; display: block; width: 50px; height: 50px; margin: 10px auto 0; border: 1px solid #999; border-radius: 50%;}
+#info .right a i{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 20px; color: #999}
+
+#menu{width: 1200px; margin: 0 auto; background: #E3E36A;}
+#menu > h2{font-size: 36px; margin: 30px 0 30px 20px; color: #fff;}
+#menu .menu_list{width: 100%; height: 300px; margin-left: 20px;}
+#menu .menu_list li{position: relative;float: left; display: block; width: 250px; height: 250px; margin-right: 50px; border-radius: 10px; background: #eee;}
+#menu .menu_list li img{width: 80%; margin-left: 10%;}
+#menu .menu_list li:nth-of-type(2) img{margin-top: -20px;}
+#menu .menu_list li:nth-of-type(3) img{width: 60%; margin-left: 20%; margin-top: -50px;}
+#menu .menu_list li:nth-of-type(4) img{margin-left: 7%;}
+#menu .menu_list li p{position: absolute; left: 50%; bottom: 20px; transform: translate(-50%); width: auto; white-space:nowrap; font-size: 14px;}
+
+#footer{}
+
+
