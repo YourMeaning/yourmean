@@ -8,10 +8,10 @@ a{text-decoration: none}
 #header .nav{display: flex;}
 #header .nav > li{width: 25%; border-right: 1px solid #eee;  text-align: center; line-height: 50px; color: #eee; font-weight: bold; cursor: pointer;}
 
-#info{position: fixed; left: 0; top: 0; width: 300px; height: 100%; border-right: 1px solid #eee;}
+#info{position: fixed; left: 0; top: 0; width: 300px; height: 100%; border-right: 1px solid #8C98FF;}
 #info > .top > h3{margin-bottom: 30px; text-align: center; font-size: 40px; background: linear-gradient(170deg, #75EBD5 25%, #8C98FF); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
 #info > .top > p{float: left; display: block; width: 230px; margin-bottom: 30px; font-size: 14px; text-align: center;}
-#info > .top > button{float: right; width: 50px; height: 20px; margin-top: 7.5px; margin-right: 15px; border: none; border-radius: 3px; font-size: 10px; background: #8C98FF; color: #eee;}
+#info > .top > button{float: right; width: 50px; height: 20px; margin-top: 7.5px; margin-right: 15px; border: none; border-radius: 3px; font-size: 10px; background: #8C98FF; color: #eee; cursor: pointer;}
 #info > .user_info,
 #info > .user_info tr,
 #info > .user_info td{border: 2px solid #dedede; border-collapse: collapse;}
@@ -45,9 +45,9 @@ a{text-decoration: none}
 #search > .class_list{width: 100%;}
 #search > .class_list > table,
 #search > .class_list > table tr,
-#search > .class_list > table td{border: 1px solid #eee; border-collapse: collapse;}
-#search > .class_list > table{width: 100%; min-height: 500px;}
-#search > .class_list > table tr{}
+#search > .class_list > table td{border: 1px solid #75EBD5; border-collapse: collapse;}
+#search > .class_list > table{width: 100%; overflow-y: scroll;}
+#search > .class_list > table tr{height: 50px;}
 #search > .class_list > table td{text-align: center; font-size: 12px;}
 
 
