@@ -10,7 +10,7 @@ $(document).ready(function(){
     
     //map
     var mapOptions = {
-        center: new naver.maps.LatLng(14347682.8596544,4194871.2782619),
+        center: new naver.maps.LatLng(35.2300765,128.6781711,17),
         zoom: 20
     };
     var map = new naver.maps.Map('map', mapOptions);
