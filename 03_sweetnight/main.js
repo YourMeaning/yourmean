@@ -10,8 +10,8 @@ $(document).ready(function(){
     
     //map
     var mapOptions = {
-        center: new naver.maps.LatLng(37.3595704, 127.105399),
-        zoom: 10
+        center: new naver.maps.LatLng(14347682.8596544,4194871.2782619),
+        zoom: 5
     };
     var map = new naver.maps.Map('map', mapOptions);
     
