@@ -29,19 +29,25 @@ body{background: #473f5a}
 #info .left p{line-height: 30px; font-size: 22px; text-align: center;}
 #info .right{float: right; width: 600px; height: 300px; padding: 80px;}
 #info .right p{line-height: 30px; font-size: 22px;}
-#info .right a{position: relative; display: block; width: 50px; height: 50px; margin: 30px auto 0; border: 1px solid #999; border-radius: 50%;}
-#info .right a i{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 20px; color: #999}
+#info .right a{position: relative; display: block; width: 50px; height: 50px; margin: 30px auto 0; border: 1px solid #999; border-radius: 50%; transition: all linear 0.2s;}
+#info .right a:hover{border-color: #E3E36A; background: #E3E36A;}
+#info .right a i{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 20px; color: #999; transition: all linear 0.2s;}
+#info .right a:hover i{color: #473f5a;}
 
 #menu{width: 1200px; margin: 0 auto; background: #E3E36A;}
-#menu > h2{font-size: 36px; margin: 30px 0 30px; color: #fff;}
+#menu > h2{margin: 30px 0 30px; font-size: 36px; text-align: center; color: #fff;}
 #menu .menu_list{width: 100%; height: 300px;}
-#menu .menu_list li{position: relative; float: left; display: block; width: 250px; height: 250px; margin-right: 65px; border-radius: 10px; background: #eee;}
+#menu .menu_list li{position: relative; float: left; display: block; width: 250px; height: 250px; margin-right: 65px; border-radius: 10px; background: #eee; overflow: hidden;}
 #menu .menu_list li:last-of-type{margin-right: 0;}
 #menu .menu_list li img{width: 80%; margin-left: 10%;}
 #menu .menu_list li:nth-of-type(2) img{margin-top: -20px;}
 #menu .menu_list li:nth-of-type(3) img{width: 60%; margin-left: 20%; margin-top: -50px;}
 #menu .menu_list li:nth-of-type(4) img{margin-left: 7%;}
 #menu .menu_list li p{position: absolute; left: 50%; bottom: 20px; transform: translate(-50%); width: auto; white-space:nowrap; font-size: 14px; color: #5a4646}
+#menu .menu_list li p.des{opacity: 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%; padding: 80px 0; transform: translate(0%); text-align: center; background: rgba(87, 87, 87, 0.8); color: #eee; transition: all linear 0.3s}
+#menu .menu_list li:nth-of-type(2) p.des{padding: 70px 0;}
+#menu .menu_list li:nth-of-type(3) p.des{padding: 100px 0;}
+#menu .menu_list li:hover p.des{opacity: 100;}
 
 #membership{width: 1200px; margin: 0 auto; background: #eee;}
 #membership h2{padding: 50px 0; font-size: 36px; text-align: center;}
@@ -63,9 +69,14 @@ body{background: #473f5a}
 #membership .membership_benefit li p{margin-bottom: 30px; font-size: 18px;}
 #membership .membership_benefit li ul{width: 600px; margin: 0 auto;}
 #membership .membership_benefit li ul li{margin-bottom: 5px; color: #716767;}
+#membership .membership_benefit li .price{margin-top: 30px; font-size: 16px; color: #716767}
 
-#map{width: 1200px; height: 600px; margin: 50px auto; background: #eee;}
+#naver_map{width: 1200px; margin: 50px auto 0; background: #eee;}
+#naver_map h2{padding: 50px 0; font-size: 36px; text-align: center;}
+#naver_map #map{width: 100%; height: 600px;}
 
-#footer{width: 100%; height: 300px; background: #473f5a;}
+#footer{width: 100%; margin: 50px 0;}
+#footer .address{width: 1200px; margin: 0 auto 10px; text-align: center; font-size: 18px; font-style: normal; color: #868686;}
+#footer .copyright{width: 1200px; margin: 0 auto; text-align: center; font-size: 18px; color: #868686;}
 
 
