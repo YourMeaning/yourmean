@@ -17,11 +17,10 @@ $(document).ready(function(){
         zoomControl: true,
         zoom: 15
     };
-    var map = new naver.maps.Map('map', mapOptions);
-    var marker = new naver.maps.Marker({
+    var map = new naver.maps.map('map', mapOptions);
+    var marker = new naver.maps.marker({
         position: new naver.maps.LatLng(35.2300765,128.6781711,17),
-        map: map,
-        center: map.destinationPoint(0, 500)
+        map: map
     });
     var contentString = [
             '<div class="iw_inner">',
