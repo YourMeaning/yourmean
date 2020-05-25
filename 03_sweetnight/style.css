@@ -62,10 +62,10 @@ body{background: #473f5a}
 #membership .membership_benefit{width: 100%;}
 #membership .membership_benefit > li{display: none; padding: 100px 0;}
 #membership .membership_benefit > li.on{display: block;}
-#membership .membership_benefit li h3{display: block; width: 100px; height: 100px; margin: 0 auto 30px; padding-top: 30px; border: 1px solid #999; border-radius: 50%; font-size: 22px; text-align: center;}
-#membership .membership_benefit li:nth-of-type(1) h3{color: #868686}
-#membership .membership_benefit li:nth-of-type(2) h3{color: #b7c649}
-#membership .membership_benefit li:nth-of-type(3) h3{color: #f20000}
+#membership .membership_benefit li h3{display: block; width: 100px; height: 100px; margin: 0 auto 30px; padding-top: 30px; border-radius: 50%; font-size: 22px; text-align: center;color: #eee;}
+#membership .membership_benefit li:nth-of-type(1) h3{background: #868686;}
+#membership .membership_benefit li:nth-of-type(2) h3{background: #b7c649}
+#membership .membership_benefit li:nth-of-type(3) h3{background: #f20000}
 #membership .membership_benefit li p{margin-bottom: 30px; font-size: 18px;}
 #membership .membership_benefit li ul{width: 600px; margin: 0 auto;}
 #membership .membership_benefit li ul li{margin-bottom: 5px; color: #716767;}

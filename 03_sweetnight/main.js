@@ -6,7 +6,7 @@ $(document).ready(function(){
         $('.membership_benefit > li').eq(i).addClass('on');
         
     });
-    $('.membership_class>li').eq(1).trigger('click');
+    $('.membership_class>li').eq(0).trigger('click');
     
     //map
     var mapOptions = {
