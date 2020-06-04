@@ -23,5 +23,14 @@ $(document).ready(function(){
         map: map
     });
     
+    $(document).on('scroll', function(){
+        var windowtop = $(window).scrollTop();  
+        if(windowtop<=200){
+                $('#visual > h3').addClass('on');
+            }else{
+                $('#visual > h3').removeClass('on');
+            }
+    })
+    $(document).trigger('scroll');
 
 });

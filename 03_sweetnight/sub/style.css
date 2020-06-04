@@ -28,5 +28,6 @@ a{text-decoration: none}
 #footer{position: fixed; bottom: 0; width: 100%; height: 122px; background: #473f5a;}
 #footer .address{width: 1200px; margin: 20px auto 10px; text-align: center; font-size: 18px; font-style: normal; color: #868686;}
 #footer .copyright{width: 1200px; margin: 0 auto; text-align: center; font-size: 18px; color: #868686;}
+#footer p{width: 1200px; margin: 0 auto; text-align: center; font-size: 10px; color: #868686;}
 
 
