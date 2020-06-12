@@ -12,7 +12,22 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     
 <!--    메인 제이쿼리-->
-    <script src="main.js"></script>
+    <script>
+        //manu
+        $(document).ready(function(){
+            $('.gnb_btn').on('click', function(){
+                $('.gnb_box').fadeToggle();
+                $('.gnb_outbox').fadeToggle();
+            });
+            $('.gnb_outbox').on('click', function(){
+                $('.gnb_box').fadeToggle();
+                $('.gnb_outbox').fadeToggle();
+            });
+            $('.gnb_box > li > p').on('click', function(){
+                $(this).siblings('.gnb_second').slideToggle();
+            });
+        });
+    </script>
     
     <meta charset="UTF-8">
     <title>단밤</title>
@@ -31,8 +46,55 @@
             <div class="gnb">
                 <a href="#"><i class="fas fa-user"></i></a>
                 <a href="../index.html#naver_map"><i class="fas fa-map-marker-alt"></i></a>
-                <a href="#"><i class="fas fa-bars"></i></a>
+                <a href="#"><i class="fas fa-bars gnb_btn"></i></a>
             </div>
+            <div class="gnb_outbox">
+            </div>
+            <ul class="gnb_box">
+                <a href="#"><p class="login">LOGIN</p></a>
+                <p class="join">JOIN</p>
+                <li>
+                    <p>DANBAM STORY</p>
+                    <ul class="gnb_second">
+                        <li>단밤 소개</li>
+                        <li>공지사항</li>
+                        <li>보도자료</li>
+                        <li>단밤 Global</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>EVENT</p>
+                    <ul class="gnb_second">
+                        <li>진행중인 이벤트</li>
+                        <li>종료된 이벤트</li>
+                        <li>당첨자 발표</li>
+                        <li>제휴카드 할인</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>STORE</p>
+                    <ul class="gnb_second">
+                        <li>매장 찾기</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>CUSTOMER</p>
+                    <ul class="gnb_second">
+                        <li>자주하는질문</li>
+                        <li>1:1 문의하기</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>가맹정보</p>
+                </li>
+                <div class="sns">
+                    SNS
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+            </ul>
         </div>
     </header>
     

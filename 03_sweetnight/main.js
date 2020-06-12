@@ -30,7 +30,20 @@ $(document).ready(function(){
             }else{
                 $('#visual > h3').removeClass('on');
             }
-    })
+    });
     $(document).trigger('scroll');
+
+    //manu
+    $('.gnb_btn').on('click', function(){
+        $('.gnb_box').fadeToggle();
+        $('.gnb_outbox').fadeToggle();
+    });
+    $('.gnb_outbox').on('click', function(){
+        $('.gnb_box').fadeToggle();
+        $('.gnb_outbox').fadeToggle();
+    });
+    $('.gnb_box > li > p').on('click', function(){
+        $(this).siblings('.gnb_second').slideToggle();
+    });
 
 });

@@ -14,6 +14,23 @@ a{text-decoration: none}
 #header .gnb i{margin-right: 20px; padding: 5px; line-height: 50px; font-size: 40px; color: #eee; transition: all linear 0.2s;}
 #header .gnb i:hover{color: #bfbf5a;}
 #header .gnb a:last-of-type i{margin-right: 0;}
+#header .gnb_outbox{display: none; position: fixed; left: 0; top: 0; width: calc(100% - 400px); height: 100%; background: #473f5ace; z-index: 1;}
+#header .gnb_box{display: none; position: fixed; top: 0; right: 0; width: 400px; height: 100%; background: #bfbf5a; z-index: 1;}
+#header .gnb_box .login,
+#header .gnb_box .join{float: left; width: 50%; height: 70px; line-height: 70px; text-align: center; font-size: 24px; font-weight: bold; color: #000; cursor: pointer;}
+#header .gnb_box .login:hover,
+#header .gnb_box .join:hover{text-decoration: underline;}
+#header .gnb_box > li{clear: both; width: 100%; height: auto; margin-bottom: 10px; padding-left: 10px; background: #473f5a;}
+#header .gnb_box > li:nth-of-type(5) > p{color: rgb(236, 123, 123);}
+#header .gnb_box > li > p{width: 100%; height: 70px; line-height: 70px; font-size: 24px; font-weight: bold; color: #bfbf5a; cursor: pointer;}
+#header .gnb_second{display: none;}
+#header .gnb_second > li{width: 100%; height: 70px; padding-left: 10px; line-height: 70px; font-size: 24px; font-weight: bold; color: #bfbf5a; cursor: pointer;}
+#header .gnb_box .sns {width: 100%; height: 70px; font-size: 32px; font-weight: bold; text-align: center; color: #eee;}
+#header .gnb_box .sns > i{margin-right: 20px; font-size: 50px; line-height: 70px; cursor: pointer;}
+#header .gnb_box .sns > i:nth-of-type(1){display: inline-block; width: 50px; height: 50px; border-radius: 5px; line-height: 55px; color: #eee; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);}
+#header .gnb_box .sns > i:nth-of-type(2){color: #C4302B;}
+#header .gnb_box .sns > i:nth-of-type(3){color: #1DA1F2;;}
+#header .gnb_box .sns > i:nth-of-type(4){color: #3B5998;}
 
 #login{width: 100%; min-height: 800px; height: calc(100% - 70px - 122px); padding: 200px; background: url(../img/08.jpg) no-repeat; background-size: cover; background-position: center;}
 #login .login_box{width: 400px; height: 300px; margin: 0 auto;  border-radius: 10px; background: #E3E36A;}

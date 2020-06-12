@@ -16,10 +16,8 @@ $(document).ready(function(){
     $('#major').on('change', function(){
         var i = $('#major option:selected').val();
         $('.class_list tr').hide();
-        if($('.list_major').html() == i){
-            $(this).parents('tr').show();
-        }
-        alert(i);
+        $('.list_major');
+        
     });
 
     
