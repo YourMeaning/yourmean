@@ -1,6 +1,7 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 ul, ol, li{list-style: none}
 a{text-decoration: none}
+select { -webkit-appearance: none; /* 네이티브 외형 감추기 */ -moz-appearance: none; appearance: none; background: url(../04_portland/img/Open\ Icon.png) no-repeat 95% 50%; /* 화살표 모양의 이미지 */ }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
