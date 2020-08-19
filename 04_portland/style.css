@@ -20,9 +20,24 @@ header .top_box{width: 1170px; height: 90px; margin: 0 auto; overflow: hidden;}
 
 .bottom_box{width: 1170px; height: 56px; margin: 0 auto;}
 .bottom_box ul li{float: left; margin-right: 30px;}
+.bottom_box ul li a{font-size: 11px; line-height: 56px; font-family: 'Montserrat'; color: #b9bed1;}
+.bottom_box ul li.on a{color: #343e5c;}
+.bottom_box .right{float: right;}
+.bottom_box p{float: left; margin-right: 54px; font-size: 11px; line-height: 56px; font-family: 'Montserrat'; color: #b9bed1; cursor: pointer;}
+.bottom_box img{display: block; float: left; padding: 21.5px 0; cursor: pointer;}
+.bottom_box input{position: relative; float: left; width: 140px; height: 20px; margin: 18px 0; padding-left: 5px; border: none;}
+.bottom_box input::placeholder{font-size: 11px; font-weight: bold; font-family: 'Montserrat'; color: #b9bed1; transform: translateY(-3px);}
+
+#visual{width: 100%; background: #1c1e23; overflow: hidden;}
+#visual .wrap{position: relative; width: 1170px; height: 500px; margin: 0 auto;}
+#visual h2{padding-top: 100px; padding-left: 100px; margin-bottom: 32px; font-size: 42px; line-height: 52px; font-weight: bold; font-family: 'Montserrat'; color: #fff;}
+#visual p{padding-left: 100px; margin-bottom: 60px; font-size: 16px; line-height: 24px; font-family: 'Montserrat'; color: #fff;}
+#visual .btn{display: block; width: 165px; height: 42px; margin-left: 100px; border-radius: 19px; font-size: 11px; text-align: center; line-height: 42px; font-family: 'Montserrat'; color: #fff; background: #2754eb;}
+#visual .wrap > img{position: absolute; top: -100px; left: 800px; width: 300px;}
+#visual .next{position: absolute; right: 0; top: 50%; width: 42px; height: 42px; border: 1px solid #45474b; border-radius: 50%; transform: translateY(-50%); cursor: pointer;}
 .bottom_box ul li a{font-size: 11px; line-height: 56px; color: #b9bed1; transition: all 0.2s linear;}
 .bottom_box ul li a:hover{color: #343e5c;}
-.bottom_box p{float: left; margin-left: 410px; margin-right: 54px; font-size: 11px; line-height: 56px; color: #b9bed1; cursor: pointer; transition: all 0.2s linear;}
+.bottom_box p{float: left; margin-right: 54px; font-size: 11px; line-height: 56px; color: #b9bed1; cursor: pointer; transition: all 0.2s linear;}
 .bottom_box p:hover{color: #343e5c;}
 .bottom_box img{display: block; float: left; padding: 21.5px 0; cursor: pointer;}
 .bottom_box input{position: relative; float: right; width: 140px; height: 20px; margin: 18px 0; border: none;}
@@ -37,10 +52,22 @@ header .top_box{width: 1170px; height: 90px; margin: 0 auto; overflow: hidden;}
 #visual .next{position: absolute; right: 300px; top: 50%; width: 42px; height: 42px; border: 1px solid #45474b; border-radius: 50%; transform: translateY(-50%); cursor: pointer;}
 #visual .next img{display: block; margin: 15px auto;}
 
-
 #content{width: 100%; height: 2400px; background: #e4e5e7;}
 #content > .wrap{width: 1170px; margin: 0px auto; padding: 50px 0;}
-#content .sort{width: 100%; height: 56px; border-radius: 5px; background: #fff;}
+#content .sort{width: 100%; height: 56px; border-radius: 5px; background: #fff; overflow: hidden;}
+#content .sort .left{float: left; width: 270px; padding: 24px 0px 24px 20px; border-right: 1px solid #f2f2f2;}
+#content .sort .left p{float: left; margin-right: 48px; font-size: 11px; color: #a1a7bd;}
+#content .sort .left select{float: left; width: 130px; border: none; font-size: 11px; color: #343e5c;}
+#content .sort .middle{float: left; padding: 20px;}
+#content .sort .middle p{float: left; margin-right: 9px; font-size: 11px; color: #a1a8bd;}
+#content .sort .middle .keywords{float: left; width: 163px; height: 32px; margin-top: -8px; margin-right: 29px; padding-left: 10px; padding-bottom: 2px; border: 1px solid #e4e9f0; border-radius: 16px; font-size: 11px; color: #a1a8bd; background: #f0f2f7;}
+#content .sort .middle .keywords::placeholder{font-size: 11px; color: #a1a8bd;}
+#content .sort .middle .price{float: left; width: 64px; height: 32px; margin-top: -8px; margin-right: 16px; padding-left: 10px; padding-bottom: 2px; border: 1px solid #e4e9f0; border-radius: 16px; font-size: 13px; color: #343e5c; background: #f0f2f7;}
+#content .sort .middle .price:nth-of-type(3){position: relative; margin-right: 32px;}
+#content .sort .middle .price:nth-of-type(3):before{position: absolute; top: 0; left: 0; content: '-'; display: block; width: 400px; height: 100px; background: #a1a8bd;}
+#content .sort .middle .price::placeholder{font-size: 13px; color: #343e5c;}
+#content .sort .middle .free_shipping{float: left;}
+#content .sort .middle .free_shipping+label{}
 
 #content .filters{float: left; width: 270px; height: auto; margin: 30px 30px 0 0;}
 
