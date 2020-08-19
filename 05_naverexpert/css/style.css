@@ -1,0 +1,34 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: NanumSquare,나눔스퀘어,Nanum Barun Gothic,나눔바른고딕,"Nanum Barun Gothic",NanumGothic,"나눔고딕","Apple SD Gothic Neo",Dotum,"돋움",sans-serif; -webkit-font-smoothing: antialiased;}
+ul, ol, li{list-style: none}
+a{text-decoration: none}
+
+body{width: 100%; height: 2000px; background: #eee;}
+
+#header{position: fixed; top: 0; left: 0; width: 100%; background: rgba(0, 0, 0, .4); z-index: 999;}
+#header .inner{width: 1200px; height: 86px; margin: 0 auto;}
+.logo{float: left; padding-top: 32px;}
+.logo a{display: block; width: 145px; height: 22px; background-position: -4px -4px; background-repeat: no-repeat; background-image: linear-gradient(transparent,transparent),url(../imege/sp_svg_icon.png);}
+
+nav{float: left; margin-left: 130px;}
+nav li{display: inline-block; padding: 34px; 36px;}
+nav a{font-size: 16px; font-weight: 700; line-height: 16px; letter-spacing: -.25px; color: rgba(255, 255, 255, .6);}
+
+.btn_inner{float: right; padding-top: 27px;}
+.btn_inner a{display: inline-block; padding: 8px 13px; border: 1px solid rgba(255, 255, 255, .6); border-radius: 3px; font-size: 12px; font-weight: 700px; line-height: 14px; text-align: center; color: rgba(255, 255, 255, .8);}
+.btn_inner a:nth-of-type(2){margin-left: 8px;}
+
+#visual{}
+.swiper-container{position: relative; width: 100%; height: 700px;}
+.swiper-wrapper{position: relative; width: 100%; height: 700px;}
+.swiper-slide:nth-of-type(1){background: url(../imege/main_clock_plus.png); background-size: cover; background-position: 50% 100%; background-repeat: no-repeat;}
+.swiper-slide::after{content: ''; display: block; width: 100%; height: 100%; background: #222; opacity: .2;}
+
+.swiper-slide video{position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+.swiper-slide .text{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-40%); text-align: center; opacity: 0; transition: all 0.8s linear; z-index: 1;}
+.swiper-slide-active .text{transform: translate(-50%,-50%); opacity: 1;}
+.swiper-slide .text h2{font-size: 42px; font-weight: 900; line-height: 56px; letter-spacing: -2.5px; color: #fff;}
+.swiper-slide .text a{display: inline-block; margin-top: 30px; padding: 16px 32px; border: 1px solid #fff; border-radius: 28px;  font-size: 16px; font-weight: 900; line-height: 18px; color: #fff;}
+
+.swiper-pagination{margin-bottom: 20px;}
+.swiper-pagination-bullet{width: 42px; height: 3px; border-radius: 0; background-color: #fff; opacity: .2;}
+.swiper-pagination-bullet-active{opacity: 1;}
