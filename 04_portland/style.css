@@ -58,7 +58,7 @@ header .top_box{width: 1170px; height: 90px; margin: 0 auto; overflow: hidden;}
 #content .sort .left{float: left; width: 270px; padding: 24px 0px 24px 20px; border-right: 1px solid #f2f2f2;}
 #content .sort .left p{float: left; margin-right: 48px; font-size: 11px; color: #a1a7bd;}
 #content .sort .left select{float: left; width: 130px; border: none; font-size: 11px; color: #343e5c;}
-#content .sort .middle{float: left; padding: 20px;}
+#content .sort .middle{float: left; padding: 24px 0 0 20px;}
 #content .sort .middle p{float: left; margin-right: 9px; font-size: 11px; color: #a1a8bd;}
 #content .sort .middle .keywords{float: left; width: 163px; height: 32px; margin-top: -8px; margin-right: 29px; padding-left: 10px; padding-bottom: 2px; border: 1px solid #e4e9f0; border-radius: 16px; font-size: 11px; color: #a1a8bd; background: #f0f2f7;}
 #content .sort .middle .keywords::placeholder{font-size: 11px; color: #a1a8bd;}
@@ -66,8 +66,11 @@ header .top_box{width: 1170px; height: 90px; margin: 0 auto; overflow: hidden;}
 #content .sort .middle .price:nth-of-type(3){position: relative; margin-right: 32px;}
 #content .sort .middle .price:nth-of-type(3):before{position: absolute; top: 0; left: 0; content: '-'; display: block; width: 400px; height: 100px; background: #a1a8bd;}
 #content .sort .middle .price::placeholder{font-size: 13px; color: #343e5c;}
-#content .sort .middle .free_shipping{float: left;}
-#content .sort .middle .free_shipping+label{}
+#content .sort .middle .free_shipping{float: left; margin-right: 10px;}
+#content .sort .middle .free_shipping+label{font-size: 13px;}
+#content .sort .right{float: right; width: 230px; padding: 24px;}
+#content .sort .right p{float: left; font-size: 13px; color: #a1a8bd;}
+#content .sort .right select{float: right; width: 60px; border: none; font-size: 13px;}
 
 #content .filters{float: left; width: 270px; height: auto; margin: 30px 30px 0 0;}
 
