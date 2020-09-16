@@ -19,18 +19,24 @@ p{font-size: 17px; line-height: 28px; letter-spacing: -1.8px; color: #4a4a4a;}
 body{width: 100%; height: 2000px; background: #eee;}
 
 #header{position: fixed; top: 0; left: 0; width: 100%; background: rgba(0, 0, 0, .4); z-index: 999;}
+#header.active{background: #fff;}
 #header .inner{width: 1200px; height: 86px; margin: 0 auto;}
 #header .logo{float: left; padding-top: 32px;}
 #header .logo a{display: block; width: 145px; height: 22px; background-position: -4px -4px; background-repeat: no-repeat; background-image: linear-gradient(transparent,transparent),url(../imege/sp_svg_icon.png);}
+#header.active .logo a{background-position: -4px -34px;}
 
-nav{float: left; margin-left: 130px;}
-nav li{display: inline-block; padding: 34px; 36px;}
-nav a{font-size: 16px; font-weight: 700; line-height: 16px; letter-spacing: -.25px; color: rgba(255, 255, 255, .6);}
+#header nav{float: left; margin-left: 130px;}
+#header nav ul >li{display: inline-block; padding: 34px; 36px;}
+#header nav a{font-size: 16px; font-weight: 700; line-height: 16px; letter-spacing: -.25px; color: rgba(255, 255, 255, .6);}
+#header.active nav a{color: rgba(0, 0, 0, .6);}
+#header nav li ul{display: none;}
 
-.btn_inner{float: right; padding-top: 27px;}
-.btn_inner a{display: inline-block; padding: 8px 13px; border: 1px solid rgba(255, 255, 255, .6); border-radius: 3px; font-size: 12px; font-weight: 700px; line-height: 14px; text-align: center; color: rgba(255, 255, 255, .8); transition: all 0.3s linear;}
-.btn_inner a:hover{border: 1px solid #fff; color: #000; background: #fff;}
-.btn_inner a:nth-of-type(2){margin-left: 8px;}
+#header .btn_inner{float: right; padding-top: 27px;}
+#header .btn_inner a{display: inline-block; padding: 8px 13px; border: 1px solid rgba(255, 255, 255, .6); border-radius: 3px; font-size: 12px; font-weight: 700px; line-height: 14px; text-align: center; color: rgba(255, 255, 255, .8); transition: all 0.3s linear;}
+#header .btn_inner a:hover{border: 1px solid #fff; color: #000; background: #fff;}
+#header.active .btn_inner a{border: 1px solid rgba(0, 0, 0, .4); color: rgba(0, 0, 0, .8);}
+#header.active .btn_inner a:hover{border: 1px solid #05d685; color: #fff; background: #05d685;}
+#header .btn_inner a:nth-of-type(2){margin-left: 8px;}
 
 #visual{}
 .swiper-container{position: relative; width: 100%; height: 700px;}
