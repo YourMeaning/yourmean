@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>네이버 클로바</title>
     <link rel="icon" type="image/png" href="imege/clova.png">
-<!--    slick-->
-    <link rel="stylesheet" type="text/css" href="plugin/swiper-5.3.0/package/css/swiper.min.css"/>
-<!--    js-->
+<!--    Jquery-->
     <script src="plugin/jquery-1.12.4.js"></script>
+<!--    Swiper-->
     <script src="plugin/swiper-5.3.0/package/js/swiper.min.js"></script>
-    
+    <link rel="stylesheet" type="text/css" href="plugin/swiper-5.3.0/package/css/swiper.min.css"/>
+<!--    CSS-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,33 +22,43 @@
                 <ul>
                     <li>
                         <a href="#">기술 · 솔루션</a>
+                        <ul></ul>
                     </li>
                     <li>
                         <a href="#">제품</a>
                         <ul>
-                            <li>
-                                <a href="#">네이버 클로바 앱</a>
-                                <a href="#">스마트 디바이스</a>
-                            </li>
-                            <li>
-                                <a href="#">클로바 스마트 홈</a>
-                                <a href="#">지원 기기</a>
-                            </li>
-                            <li>
-                                <a href="#">명령어 가이드</a>
-                                <a href="#">스킬 스토어</a>
-                                <a href="#">클로바 & 일상들</a>
-                            </li>
+                            <li><a href="#">네이버 클로바 앱</a></li>
+                            <li><a href="#">스마트 디바이스</a></li>
+                            <li><a href="#">클로바 스마트 홈</a></li>
+                            <li><a href="#">지원 기기</a></li>
+                            <li><a href="#">명령어 가이드</a></li>
+                            <li><a href="#">스킬 스토어</a></li>
+                            <li><a href="#">클로바 &amp; 일상들</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">플랫폼</a>
+                        <ul>
+                            <li><a href="#">Platform</a></li>
+                            <li><a href="#">Skill Tools</a></li>
+                            <li><a href="#">Interface Connect</a></li>
+                            <li><a href="#">Skills</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#">파트너</a>
+                        <ul></ul>
                     </li>
                     <li>
                         <a href="#">리서치</a>
+                        <ul>
+                            <li><a href="#">Research Areas</a></li>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Join Us</a></li>
+                            <li><a href="#">Tech Demo</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
@@ -219,7 +229,8 @@
     </footer>
 </body>
 
-<script>
+<script type="text/javascript">
+//    스와이퍼
     var mySwiper = new Swiper('.swiper-container', {
         autoplay: {
             delay: 10000,
@@ -231,5 +242,55 @@
             clickable: true,
           },
     });
+    
+//    nav 서브메뉴
+    var $sub_list = $("nav");
+    $sub_list.find("ul ul").hide();
+    $sub_list.find("li.active ul").show();
+    function subMenu(e){
+        var $this = $(this); $this.find("ul").toggle().parent("li").addClass("active");
+    }
+    function subMenu_out(e){
+        var $this = $(this); 
+        $this.removeClass("active").find(">ul").toggle();
+    }
+    $sub_list.find("ul > li").hover(subMenu,subMenu_out).focus(subMenu);
+    
+//    헤더 스크롤
+    var didScroll; 
+    var lastScrollTop = 0; 
+    var delta = 5; 
+    var navbarHeight = $('#header').outerHeight(); 
+    $(window).scroll(function(event){ 
+        didScroll = true;
+    });
+    setInterval(function() { 
+        if (didScroll) { 
+            hasScrolled();
+            didScroll = false; 
+        } 
+    }, 250); 
+    function hasScrolled() { 
+        var st = $(this).scrollTop();
+        if(Math.abs(lastScrollTop - st) <= delta) return; 
+        if (st > lastScrollTop && st > navbarHeight){  
+            $('#header').removeClass('nav-down').addClass('nav-up'); 
+        } else { 
+            if(st + $(window).height() < $(document).height()) { 
+                $('#header').removeClass('nav-up').addClass('nav-down'); 
+            } 
+        } lastScrollTop = st; 
+    }
+    
+    var pos_content = $('#content1').offset().top;
+    $(window).on('scroll', function(){
+        var scroll = $(window).scrollTop();
+        if(scroll <= pos_content){
+            $('#header').removeClass('active');
+        } else{
+            $('#header').addClass('active');
+        }
+    });
+
 </script>
 </html>
