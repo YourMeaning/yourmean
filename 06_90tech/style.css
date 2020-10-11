@@ -1,0 +1,473 @@
+/*웹폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Quicksand',NanumSquare,나눔스퀘어,Nanum Barun Gothic,나눔바른고딕,"Nanum Barun Gothic",NanumGothic,"나눔고딕","Apple SD Gothic Neo",Dotum,"돋움",sans-serif; font-style: normal;}
+*::after,*::before{
+    box-sizing: border-box;
+}
+ul, ol, li{list-style: none}
+a{text-decoration: none; color: inherit;}
+.cf::after{content: ''; display: block; clear: both;}
+
+.c2{
+    letter-spacing: -.7px;
+    color: #1bacf6;
+}
+.c1{
+    letter-spacing: -.7px;
+    font-weight: 400;
+    color: #fff;
+}
+.btn{
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 1px;
+    border: 3px solid #1bacf6;
+    color: #1bacf6;
+    transition: all linear .3s;
+}
+.btn:hover{
+    color: #222;
+    background: #1bacf6;
+}
+
+/* header 시작*/
+#header{
+    position: fixed;
+    width: 100%;
+    height: 86px;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    z-index: 50;
+}
+#header.small{
+    height: 50px;
+    border-bottom: none;
+    background: #222;
+}
+#header .wrap{
+    width: 1280px;
+    margin: 0 auto;
+}
+#header .logo{
+    float: left;
+    margin: 0 100px 0 50px;
+    padding-top: 28px;
+}
+#header.small .logo{
+    padding-top: 11px;
+}
+#header.active{
+    border-bottom: none;
+    background: #222;
+}
+.mainmenu{
+    float: left;
+}
+.mainmenu > li{
+    float: left;
+    width: 102px;
+    padding: 0 10px;
+    line-height: 86px;
+    text-align: center;
+}
+.mainmenu > li:hover{
+    background: #1bacf6;
+}
+.mainmenu a{
+    color: #fff;
+}
+.small .mainmenu > li{
+    line-height: 50px;
+}
+.submenu{
+    position: relative;
+    height: 140px;
+    padding: 3px 0px;
+    line-height: 21px;
+}
+#header.active .submenu::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1000%;
+    top: 0;
+    width: 2000%;
+    height: 100%;
+    background: #222;
+    z-index: -1;
+}
+.submenu li{
+    font-size: 14px;
+}
+.submenu li a{
+    position: relative;
+}
+.submenu li a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0%;
+    height: 1px;
+    background: #eee;
+    transition: all linear .2s;
+}
+.submenu li a:hover::after{
+    width: 100%;
+}
+.languge{
+    float: right;
+    position: relative;
+    margin-right: 20px;
+    line-height: 86px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff
+}
+.small .languge{
+    line-height: 50px;
+}
+.languge::after{
+    content: '';
+    position: absolute;
+    right: -15px; top: 30px;
+    display: block;
+    width: 10px;
+    height: 30px;
+    background: url(img/select.png) left 2px no-repeat;
+}
+.small .languge::after{
+    top:11px;
+}
+.lang_list{
+    position: absolute;
+    left: 0px; top: 60px;
+    display: none;
+}
+.small .lang_list{
+    top:40px;
+}
+.lang_list > li{
+    padding: 3px 7px;
+    line-height: 25px;
+    color: #222;
+    background: #eee;
+}
+.lang_list > li:hover{
+    background: #fff;
+}
+.lang_list a{
+    position: relative;
+}
+.lang_list a::after{
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0%;
+    height: 1px;
+    background: #555;
+    transition: all linear .2s;
+}
+.lang_list li:hover a::after{
+    width: 100%;
+}
+/*header 끝*/
+
+/*visual 시작*/
+#visual{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+}
+#visual .wrap{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.text_box{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 300px 0;
+}
+.text_box .title{
+    font-size: 64px;
+    font-weight: 100;
+    line-height: 80px;
+}
+.text_box .title::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    margin: 20px 0 35px;
+    background: #1bacf6;
+}
+.text_box .c2{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.text_box p:last-of-type{
+    margin-bottom: 70px;
+    font-size: 17px;
+}
+.background{
+    position: absolute;
+    z-index: -1;
+}
+.background .pattern{
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    background: url(img/visual_pattern.png) center center repeat;
+    z-index: 2;
+}
+.background .dim{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .65);
+    z-index: 1;
+}
+.background video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.background img{
+    display: none;
+/*    js 전 삭제***************************/
+}
+
+/*visual 끝*/
+
+/*contnt1 시작*/
+#content1{
+    width: 100%;
+    height: 640px;
+}
+#content1 ul{
+    width: 1280px;
+    margin: -100px auto 0;
+}
+#content1 ul li{
+    float: left;
+    text-align: center;
+}
+#content1 ul li a{
+    display: block;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    padding: 42px;
+    text-align: center;
+    background: url(img/content1_1.jpg) center center no-repeat;
+    background-size: cover;
+}
+#content1 ul li a::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; top: 0;
+    width: 0%;
+    height: 100%;
+    border-top: 3px solid #1bacf6;
+    border-bottom: 3px solid #1bacf6;
+    transition: all linear .3s;
+    pointer-events: none;
+}
+#content1 ul li a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 0%;
+    border-left: 3px solid #1bacf6;
+    border-right: 3px solid #1bacf6;
+    transition: all linear .2s;
+    pointer-events: none;
+}
+#content1 ul li a:hover::before{
+    width: 100%;
+}
+#content1 ul li a:hover::after{
+    height: 100%;
+}
+#content1 ul li:nth-of-type(2) a{
+    background-image: url(img/content1_2.jpg)
+}
+#content1 ul li:nth-of-type(3) a{
+    background-image: url(img/content1_3.jpg)
+}
+#content1 ul li:nth-of-type(4) a{
+    background-image: url(img/content1_4.jpg)
+}
+#content1 ul li:nth-of-type(5) a{
+    background-color: #1bacf6;
+    background-image: url(img/content1_5.png)
+}
+#content1 ul li:nth-of-type(5) a::after,
+#content1 ul li:nth-of-type(5) a::before{
+    border-color: #fff;
+}
+#content1 ul li:nth-of-type(6) a{
+    background-image: url(img/content1_6.jpg)
+}
+#content1 ul li a.big{
+    width: 640px;
+}
+.cate_en{
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.cate_en.c2{
+    border-color: #1bacf6;
+    color: #1bacf6;
+}
+.cate_kr{
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 38px;
+    padding: 5px 0 0 0;
+    color: #fff;
+}
+.cate_kr.c2{
+    color: #333;
+}
+.des{
+    margin-top: 54px;
+    color: #fff;
+    display: inline-block;
+}
+.des.c2{
+    color: #333;
+}
+.des strong{
+    display: inline-block;
+    margin-top: 12px;
+}
+
+/*content1 끝*/
+
+/*content2 시작*/
+#content2 {
+    width: 100%;
+    height: 720px;
+    margin-top: 100px;
+    background: #fafafa url(img/content2.png) center center no-repeat;
+    background-size: contain;
+}
+#content2 .wrap{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 70px 0 0 0;
+}
+#content2 .title{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 64px;
+    color: #333;
+}
+#content2 .title::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    margin: 20px 0 35px;
+    background: #1bacf6;
+}
+#content2 .c2{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#content2 p:last-of-type{
+    margin-bottom: 70px;
+    font-size: 17px;
+}
+
+/*content2 끝*/
+
+/*footer 시작*/
+#footer{
+    width: 100%;
+}
+#footer .top_box{
+    width: 100%;
+}
+.sitemap{
+    width: 1280px;
+    margin: 0 auto;
+}
+.sitemap > li{
+    float: left;
+    position: relative;
+    width: 182.857px;
+    height: 135px;
+    margin: 32px 0;
+    padding: 0 24px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #777;
+}
+.sitemap > li::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0; top: 0;
+    width: 1px;
+    height: 100%;
+    background: url(img/line_eee.gif) right center repeat-y;
+}
+.sitemap li a{
+    position: relative;
+}
+.sitemap li a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0%;
+    height: 1px;
+    background: #777;
+    transition: all linear .3s;
+}
+.sitemap li a:hover::after{
+    width: 100%;
+}
+.sitemap li b{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #555;
+}
+#footer .bottom_box{
+    width: 100%;
+    background: #e9e9e9;
+}
+#footer .bottom_box .wrap{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+#footer .bottom_box .logo{
+    margin-bottom: 10px;
+}
+#footer .bottom_box address{
+    font-size: 15px;
+    color: #777;
+}
+#footer .bottom_box .copyright{
+    font-weight: bold;
+    color: #777;
+}
