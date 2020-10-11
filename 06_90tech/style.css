@@ -1,6 +1,11 @@
 /*웹폰트*/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
+@font-face{
+    font-family:NanumSquare;
+    src:local(※), url('NanumSquareR.woff') format('woff');
+    font-weight: normal; 
+    font-style: normal;
+}
 *{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Quicksand',NanumSquare,나눔스퀘어,Nanum Barun Gothic,나눔바른고딕,"Nanum Barun Gothic",NanumGothic,"나눔고딕","Apple SD Gothic Neo",Dotum,"돋움",sans-serif; font-style: normal;}
 *::after,*::before{
     box-sizing: border-box;
@@ -303,6 +308,10 @@ a{text-decoration: none; color: inherit;}
 }
 #content1 ul li:nth-of-type(3) a{
     background-image: url(img/content1_3.jpg)
+}
+#content1 ul li:nth-of-type(3) a::after,
+#content1 ul li:nth-of-type(3) a::before{
+    border-color: #fff;
 }
 #content1 ul li:nth-of-type(4) a{
     background-image: url(img/content1_4.jpg)
