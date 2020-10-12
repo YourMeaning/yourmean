@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="import" href="../06_90tech/index.html">
+    <link rel="stylesheet" href="../06_90tech/style.css">
+    <script src="../06_90tech/plugin/jquery-1.12.4.js"></script>
+    <style>
+        section{
+            width: 1280px;
+            height: 1000px;
+            margin: 0 auto;
+            background: #eee;
+            overflow: hidden;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            margin: 300px auto 0;
+            border: 1px solid #222;
+            background: orange;
+            transition: all linear .5s;
+        }
+        .box:hover{
+            width: 100%;
+            height: 100%;
+            margin-top: 0;
+            border: none;
+        }
+        #content{
+            width: 100%;
+            height: 10000px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box">
+
+        </div>
+    </section>  
+    <section id="content">
+
+    </section>
+</body>
+
+<script>
+    // 제이쿼리 .load 사용하는방식 익히기***********
+    $(document).ready( function() {
+
+        $("#content").load("../06_90tech/index.html");
+        //~이렇게 한줄만 해주면 알아서 contents에 testContents.html파일을 넣어 준다.
+
+        });
+
+</script>
+</html>

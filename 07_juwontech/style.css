@@ -1,16 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
-*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Quicksand',NanumSquare,나눔스퀘어,Nanum Barun Gothic,나눔바른고딕,"Nanum Barun Gothic",NanumGothic,"나눔고딕","Apple SD Gothic Neo",Dotum,"돋움",sans-serif; font-style: normal;}
-*::after,*::before{
+@font-face{
+    font-family:NanumSquare;
+    src:local(※), url('NanumSquareR.woff') format('woff');
+    font-weight: normal; 
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', NanumSquare, 나눔스퀘어, Nanum Barun Gothic, 나눔바른고딕, "Nanum Barun Gothic", NanumGothic, "나눔고딕", "Apple SD Gothic Neo", Dotum, "돋움", sans-serif;
+    font-style: normal;
+}
+*::after,
+*::before {
     box-sizing: border-box;
 }
-ul, ol, li{list-style: none}
-a{text-decoration: none; color: inherit;}
-.cf::after{content: ''; display: block; clear: both;}
 
-
-/*header 시작*/
-#header{
-    width: 
+ul,ol,li {
+    list-style: none
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cf::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body{
+    position: relative;
+}
+
+/*header 시작*/
+#header {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid rgba(255, 255, 255 , .5);
+    z-index: 10;
+}
+#header .logo{
+    float: left;
+    display: block;
+    width: 25%;
+    padding: 20px 0 0 30px;
+}
+#header nav{
+    float: left;
+    width: 50%;
+}
+#header .mainmenu > li{
+    float: left;
+    width: 16.666%;
+    text-align: center;
+}
+#header .mainmenu > li > a{
+    display: block;
+    font-weight: bold;
+    line-height: 90px;
+    color: #fff;
+}
+#header .submenu{
+    display: none;
+}
+#header .gnb{
+    float: left;
+    width: 25%;
+    padding: 34px 40px 0;
+    text-align: right;
+}
+#header .gnb > li{
+    display: inline-block;
+}
+#header .gnb > li > a{
+    margin: 0 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/*header 끝*/
+
+/*visual 시작*/
+#visual{
+    width: 100%;
+}
+#visual .swiper-slide{
+    height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#visual .swiper-slide:nth-of-type(1){
+    background-image: url(img/visual_1.jpg);
+}
+#visual .swiper-slide:nth-of-type(2){
+    background-image: url(img/visual_2.jpg);
+}
+#visual .swiper-slide:nth-of-type(3){
+    background-image: url(img/visual_3.jpg);
+}
+#visual .text{
+    display: block;
+    margin: 0 auto;
+    padding-top: 220px;
+}
+/*visual 끝*/
