@@ -83,15 +83,19 @@
                     <img src="img/visual_text.png" alt="환경사업, 산업플랜트 전문기업 국제종합에너지자원센터 끊임없는 연구와 기술 빠르게 변하는 고객의 요구에 따라 한 걸음 한 걸음 다가서고자 최선의 노력을 다하고 있습니다." class="text">
                 </div>
             </div>
+            <div class="prev"></div>
+            <div class="next"></div>
             <div class="swiper-pagination"></div>
         </div>
     </section>
 
-    <section id="content1">
+    <section id="content1" class="cf">
         <div class="left_box">
             <p>
-                <span>고객센터<br>CUSTOMER CENTER</span>
-                하나의 제품이라고 고품질이 아니면 취급하지 않습니다.
+                <span>고객센터</span><br>
+                <span>CUSTOMER CENTER</span><br>
+                하나의 제품이라고 고품질이 아니면<br> 
+                취급하지 않습니다.
             </p>
             <strong>TEL</strong>
             <a href="#">
@@ -104,7 +108,7 @@
             </a>
         </div>
         <div class="right_box">
-            <ul>
+            <ul class="cf">
                 <li><a href="#">
                         <img src="img/icon1-1.png" alt="서류가방" class="icon">
                         <p>회사소개</p>
@@ -134,7 +138,7 @@
         </div>
     </section>
 
-    <section id="content2">
+    <section id="content2" class="cf">
         <div class="left_box">
 
         </div>
@@ -149,22 +153,22 @@
                     책임을 갖고 임하겠습니다. 현재의 자리에 안주하지 않고, 최고의 기술로 고객감동을<br>
                     실현하고자 하며, 늘 고객과 함께하는 변함없는 기업이 되겠습니다.
                 </p>
-                <a href="#" class="btn_1">인사말 바로가기&nbsp;&nbsp;&nbsp;&nbsp;+</a>
+                <a href="#" class="btn">인사말 바로가기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</a>
             </div>
         </div>
     </section>
 
-    <section id="content3">
+    <section id="content3" class="cf">
         <div class="left_box">
             <div class="online">
                 <a href="#">
-                    <p>온라인문의<br>ONLINE ENQUIRY</p>
+                    <p>온라인문의<br><span>ONLINE ENQUIRY</span></p>
                 </a>
                 <img class="arrow" src="img/arrow.png" alt="우측 화살표">
             </div>
             <div class="data">
                 <a href="#">
-                    <p>자료실<br>DATA</p>
+                    <p>자료실<br><span>DATA</span></p>
                 </a>
                 <img class="arrow" src="img/arrow.png" alt="우측 화살표">
             </div>
@@ -235,6 +239,8 @@
                         <a href="#"><img src="img/gallery_20.jpg" alt="시공사진"></a>
                     </div>
                 </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>
@@ -263,6 +269,10 @@
                 delay: 2000,
             },
             speed: 500,
+            navigation: {
+                prevEl: '.prev',
+                nextEl: '.next',
+            },
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
@@ -270,7 +280,13 @@
             }
         });
         var mySwiper = new Swiper('.second', {
+            navigation: {
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
+            },
             loop: true,
+            slidesPerView: 4,
+            spaceBetween: 20,
             speed: 500
         });
 

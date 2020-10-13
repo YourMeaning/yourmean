@@ -91,6 +91,9 @@ body{
 #visual{
     width: 100%;
 }
+#visual .swiper-wrapper{
+    position: relative;
+}
 #visual .swiper-slide{
     height: 550px;
     background-size: cover;
@@ -106,9 +109,267 @@ body{
 #visual .swiper-slide:nth-of-type(3){
     background-image: url(img/visual_3.jpg);
 }
+#visual .prev{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 30px;
+    height: 52px;
+    background: url(img/slide_skin_type.png);
+    background-position: 0 -90px;
+    z-index: 1;
+}
+#visual .next{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 30px;
+    height: 52px;
+    background: url(img/slide_skin_type.png);
+    background-position: -50px -90px;
+    z-index: 1;
+}
 #visual .text{
     display: block;
     margin: 0 auto;
     padding-top: 220px;
 }
 /*visual 끝*/
+
+/*content1 시작*/
+#content1{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+#content1 .left_box{
+    float: left;
+    width: 300px;
+    border-right: 1px solid rgba(221, 221, 221);
+}
+#content1 .left_box p{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 125%;
+    color: #7e7e7e;
+}
+#content1 .left_box p span{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #595959;
+}
+#content1 .left_box strong{
+    float: left;
+    width: 36px;
+    height: 21px;
+    margin: 7px 10px 10px 0;
+    text-align: center;
+    font-size: 13px;
+    line-height: 21px;
+    border-radius: 3px;
+    color: #fff;
+    background: #0d7ccd;
+}
+#content1 .left_box strong:nth-of-type(2){
+    background: #595959; 
+}
+#content1 .left_box a p{
+    margin-top: 5px;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 26px;
+    letter-spacing: -1px;
+    color: #0176cc;
+}
+#content1 .left_box a:nth-of-type(2) p{
+    color: #595959;
+}
+#content1 .right_box{
+    float: left;
+}
+#content1 .right_box ul{
+    width: 900px;
+}
+#content1 .right_box li{
+    float: left;
+    width: 20%;
+}
+#content1 .right_box a{
+    display: block;
+    text-align: center;
+}
+#content1 .right_box p{
+    margin: 20px 0;
+    font-size: 19px;
+    font-weight: bold;
+    color: #333;
+}
+#content1 .right_box .btn{
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 25px;
+    border: 2px solid #007bd0;
+    border-radius: 3px;
+    color: #007bd0;
+    transition: all linear .3s;
+}
+#content1 .right_box .btn:hover{
+    color: #fff;
+    background: #007bd0;
+}
+/*content1 끝*/
+
+/*content2 시작*/
+#content2{
+    width: 100%;
+}
+#content2 .left_box{
+    float: left;
+    width: 50%;
+    height: 300px;
+    background: url(img/section_bg1-1.jpg) no-repeat center;
+    background-size: cover;
+}
+#content2 .right_box{
+    float: left;
+    width: 50%;
+    height: 300px;
+    padding: 55px 0 0 30px;
+    color: #fff;
+    background: url(img/section_bg2-1.jpg) no-repeat center;
+    background-size: cover;
+}
+#content2 .right_box .title{
+    font-size: 29px;
+    line-height: 29px;
+}
+#content2 .right_box .title span{
+    margin-left: 30px;
+    font-size: 19px;
+    vertical-align: top;
+}
+#content2 .right_box .title span::before{
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 20px;
+    margin: 6px 10px 0 0;
+    vertical-align: top;
+    background: #fff;
+}
+#content2 .right_box .des{
+    margin: 20px 0 40px;
+    font-size: 13px;
+    line-height: 150%;
+}
+#content2 .right_box .btn{
+    display: block;
+    width: 180px;
+    height: 40px;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 38px;
+    transition: all linear .3s;
+}
+#content2 .right_box .btn:hover{
+    color: #333;
+    background: #fff;
+}
+/*content2 끝*/
+
+/*content3 시작*/
+#content3{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+#content3 .left_box{
+    float: left;
+    width: 280px;
+    margin-right: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+#content3 .left_box .online{
+    position: relative;
+    background: url(img/ban3-1bg.jpg) no-repeat center;
+    background-size: cover;
+}
+#content3 .left_box .data{
+    position: relative;
+    background: url(img/ban3-2bg.jpg) no-repeat center;
+    background-size: cover;
+}
+#content3 .left_box a{
+    display: block;
+    height: 130px;
+    padding: 40px 20px;
+    overflow: hidden;
+}
+#content3 .left_box p{
+    font-size: 20px;
+}
+#content3 .left_box p span{
+    font-size: 14px;
+}
+#content3 .left_box .arrow{
+    position: absolute;
+    right: 40px;
+    top: 60px;
+    transition: all linear .2s;
+}
+#content3 .left_box div:hover .arrow{
+    right: 30px;
+}
+#content3 .right_box{
+    float: left;
+    width: 900px;
+    height: 260px;
+    padding: 20px;
+    border: 1px solid rgba(221, 221, 221);
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 40px;
+    color: #333;
+    overflow: hidden;
+}
+#content3 .right_box .title{
+    float: left;
+    height: 40px;
+}
+#content3 .right_box .title::before{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #2427aa;
+}
+#content3 .right_box .btn{
+    float: right;
+    height: 40px;
+}
+#content3 .right_box .swiper-container{
+    clear: both;
+    width: 860px;
+    padding: 20px 0;
+}
+#content3 .right_box .swiper-slide{
+    height: 150px;
+}
+#content3 .right_box .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#content3 .right_box .swiper-button-prev,
+#content3 .right_box .swiper-button-next{
+    color: rgba(255, 255, 255, 0.5);
+}
+/*content3 끝*/
