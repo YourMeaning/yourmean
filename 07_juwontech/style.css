@@ -91,6 +91,9 @@ body{
 #visual{
     width: 100%;
 }
+#visual .swiper-container{
+    position: relative;
+}
 #visual .swiper-wrapper{
     position: relative;
 }
@@ -109,7 +112,29 @@ body{
 #visual .swiper-slide:nth-of-type(3){
     background-image: url(img/visual_3.jpg);
 }
-#visual .prev{
+#visual .swiper-slide .text{
+    display: block;
+    margin: 0 auto;
+    padding-top: 220px;
+}
+#visual .swiper-pagination{
+    width: auto;
+    left: auto;
+    right: 33px;
+}
+#visual .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: 1;
+}
+#visual .swiper-pagination-bullet-active{
+    width: 36px;
+    height: 10px;
+    border-radius: 5px;
+    background: rgba(51, 51, 51);
+}
+#visual .swiper-prev{
     position: absolute;
     left: 0;
     top: 50%;
@@ -117,9 +142,10 @@ body{
     height: 52px;
     background: url(img/slide_skin_type.png);
     background-position: 0 -90px;
+    cursor: pointer;
     z-index: 1;
 }
-#visual .next{
+#visual .swiper-next{
     position: absolute;
     right: 0;
     top: 50%;
@@ -127,12 +153,30 @@ body{
     height: 52px;
     background: url(img/slide_skin_type.png);
     background-position: -50px -90px;
+    cursor: pointer;
     z-index: 1;
 }
-#visual .text{
-    display: block;
-    margin: 0 auto;
-    padding-top: 220px;
+#visual .swiper-start{
+    position: absolute;
+    right: 20px;
+    bottom: 13px;
+    width: 12px;
+    height: 12px;
+    background: url(img/slide_skin_type.png);
+    background-position: -100px -119px;
+    cursor: pointer;
+    z-index: 1;
+}
+#visual .swiper-stop{
+    position: absolute;
+    right: 20px;
+    bottom: 13px;
+    width: 12px;
+    height: 12px;
+    background: url(img/slide_skin_type.png);
+    background-position: -100px -135px;
+    cursor: pointer;
+    z-index: 1;
 }
 /*visual 끝*/
 
@@ -373,3 +417,51 @@ body{
     color: rgba(255, 255, 255, 0.5);
 }
 /*content3 끝*/
+
+/*footer 시작*/
+#footer{
+    width: 100%;
+    padding: 30px 0;
+    background: rgba(4, 4, 14);
+}
+#footer .wrap{
+    width: 1200px;
+    margin: 0 auto;
+    color: #9b9b9b;
+}
+#footer .footer_menu{
+    margin-bottom: 20px;
+    color: #fff;
+}
+#footer .footer_menu li{
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+}
+#footer .footer_menu li::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1px; top: 50%;
+    width: 1px;
+    height: 10px;
+    margin-top: -4px;
+    background: #fff;
+}
+#footer .footer_menu li:nth-of-type(1){
+    padding-left: 0;
+}
+#footer .footer_menu li:nth-of-type(1)::after{
+    display: none;
+}
+#footer .footer_menu li a{
+    font-size: 14px;
+}
+#footer address{
+    font-size: 13px;
+}
+#footer .copyright{
+    margin-top: 5px;
+    font-size: 13px;
+}
+/*footer 끝*/

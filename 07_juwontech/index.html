@@ -83,9 +83,11 @@
                     <img src="img/visual_text.png" alt="환경사업, 산업플랜트 전문기업 국제종합에너지자원센터 끊임없는 연구와 기술 빠르게 변하는 고객의 요구에 따라 한 걸음 한 걸음 다가서고자 최선의 노력을 다하고 있습니다." class="text">
                 </div>
             </div>
-            <div class="prev"></div>
-            <div class="next"></div>
+            <div class="swiper-prev"></div>
+            <div class="swiper-next"></div>
             <div class="swiper-pagination"></div>
+            <div class="swiper-start"></div>
+            <div class="swiper-stop"></div>
         </div>
     </section>
 
@@ -175,7 +177,7 @@
         </div>
         <div class="right_box">
             <p class="title">시공갤러리</p>
-            <p class="btn">+</p>
+            <a href="#"><p class="btn">+</p></a>
             <div class="swiper-container second">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -266,12 +268,12 @@
     <script type="text/javascript">
         var mySwiper = new Swiper('.first', {
             autoplay: {
-                delay: 2000,
+                delay: 3000,
             },
-            speed: 500,
+            speed: 1000,
             navigation: {
-                prevEl: '.prev',
-                nextEl: '.next',
+                prevEl: '.swiper-prev',
+                nextEl: '.swiper-next',
             },
             pagination: {
                 el: '.swiper-pagination',
@@ -279,7 +281,20 @@
                 clickable: true,
             }
         });
-        var mySwiper = new Swiper('.second', {
+        $('.swiper-start').on('click', function(){
+            mySwiper.autoplay.start();
+            $('.swiper-start').hide();
+            $('.swiper-stop').show();
+            return false;
+        });
+        $('.swiper-stop').on('click', function(){
+            mySwiper.autoplay.stop();
+            $('.swiper-start').show();
+            $('.swiper-stop').hide();
+            return false;
+        });
+        $('.swiper-start').trigger('click');
+        var my2Swiper = new Swiper('.second', {
             navigation: {
                 prevEl: '.swiper-button-prev',
                 nextEl: '.swiper-button-next',
