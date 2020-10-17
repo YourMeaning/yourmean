@@ -266,6 +266,43 @@
     <a href="#header" class="nav_top">Top</a>
 
     <script type="text/javascript">
+        //    서브메뉴
+        var windowWidth = $(window).width();
+        var subToggle = 1;
+        if(windowWidth > 768) {
+                subToggle = 1;
+            } else {
+                subToggle = 0;
+            }
+        $(window).on('resize',function() {
+            windowWidth = $(window).width();
+            if(windowWidth > 768) {
+                subToggle = 1;
+            } else {
+                subToggle = 0;
+            }
+        });
+        var $sub_list = $("nav");
+            $sub_list.find("ul ul").hide();
+            function subMenu(e){
+               $(e).find("ul").toggle().parent("li").toggleClass("active");
+            };
+        
+            $sub_list.find(".mainmenu > li").hover(function(){
+                if(subToggle > 0) {
+                    subMenu(this);
+                }
+                console.log("hover");
+            }).focus(subMenu);
+            $sub_list.find(".mainmenu > li").click(function(){
+                if(subToggle <= 0){
+                    subMenu(this);
+                }
+                console.log("click");
+            }).focus(subMenu);
+
+        
+
         var mySwiper = new Swiper('.first', {
             autoplay: {
                 delay: 3000,

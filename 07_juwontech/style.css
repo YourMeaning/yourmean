@@ -51,6 +51,9 @@ body{
     width: 25%;
     padding: 20px 0 0 30px;
 }
+#header .logo img{
+    display: block;
+}
 #header nav{
     float: left;
     width: 50%;
@@ -66,8 +69,23 @@ body{
     line-height: 90px;
     color: #fff;
 }
+#header .mainmenu > li:hover > a,
+#header .mainmenu > li:nth-of-type(1).active > a,
+#header .mainmenu > li:nth-of-type(6).active > a{
+    color: #333;
+    background: #fff;
+}
 #header .submenu{
     display: none;
+}
+#header .submenu li a{
+    display: block;
+    line-height: 40px;
+    color: #333;
+    background: #fff;
+}
+#header .submenu li a:hover{
+    color: #2427aa;
 }
 #header .gnb{
     float: left;
@@ -84,8 +102,108 @@ body{
     font-weight: bold;
     color: #fff;
 }
-
 /*header 끝*/
+/*반응형 1200*/
+@media screen and (max-width:1200px){
+    #header .logo{
+        width: 25%;
+        padding: 20px 10px 0;
+    }
+    #header .logo img{
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+    }
+    #header nav{
+        width: auto;
+    }
+    #header .mainmenu > li{
+        width: auto;
+    }
+    #header .mainmenu > li > a{
+        padding: 0 8px;
+        font-size: 14px;
+    }
+    #header .submenu li a{
+        font-size: 12px;
+        letter-spacing: -1px;
+    }
+    #header .gnb{
+        float: right;
+        width: auto;
+        padding: 34px 0;
+    }
+    #header .gnb > li > a{
+        margin: 0 5px;
+        font-size: 12px;
+    }
+}
+/*반응형 768 태블릿*/
+@media screen and (max-width:768px){
+    #header {
+        height: 60px;
+    }
+    #header .logo{
+        float: none;
+        width: 270px;
+        margin: 5px auto;
+        padding: 0 0;
+    }
+    #header nav{
+        float: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background: #40494e;
+    }
+    #header .mainmenu > li{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    #header .mainmenu > li > a{
+        padding: 14px 50px;
+        border-bottom: 1px solid #333;
+        line-height: 22px;
+    }
+    #header .mainmenu > li:hover > a{
+        color: #333;
+        background: #fff;
+    }
+    #header .submenu{
+        display: none;
+    }
+    #header .submenu li a{
+        display: block;
+        line-height: 40px;
+        color: #333;
+        background: #fff;
+    }
+    #header .submenu li a:hover{
+        color: #2427aa;
+    }
+    #header .gnb{
+        float: none;
+        width: 25%;
+        padding: 34px 40px 0;
+        text-align: right;
+    }
+    #header .gnb > li{
+        display: inline-block;
+    }
+    #header .gnb > li > a{
+        margin: 0 15px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+    }
+}
+/*반응형 360*/
+@media screen and (max-width:360px){
+    
+}
 
 /*visual 시작*/
 #visual{
@@ -179,6 +297,18 @@ body{
     z-index: 1;
 }
 /*visual 끝*/
+/*반응형 1200*/
+@media screen and (max-width:1200px){
+    
+}
+/*반응형 768 태블릿*/
+@media screen and (max-width:768px){
+    
+}
+/*반응형 360*/
+@media screen and (max-width:360px){
+    
+}
 
 /*content1 시작*/
 #content1{
@@ -268,6 +398,18 @@ body{
     background: #007bd0;
 }
 /*content1 끝*/
+/*반응형 1200*/
+@media screen and (max-width:1200px){
+    
+}
+/*반응형 768 태블릿*/
+@media screen and (max-width:768px){
+    
+}
+/*반응형 360*/
+@media screen and (max-width:360px){
+    
+}
 
 /*content2 시작*/
 #content2{
@@ -327,6 +469,18 @@ body{
     background: #fff;
 }
 /*content2 끝*/
+/*반응형 1200*/
+@media screen and (max-width:1200px){
+    
+}
+/*반응형 768 태블릿*/
+@media screen and (max-width:768px){
+    
+}
+/*반응형 360*/
+@media screen and (max-width:360px){
+    
+}
 
 /*content3 시작*/
 #content3{
@@ -417,6 +571,18 @@ body{
     color: rgba(255, 255, 255, 0.5);
 }
 /*content3 끝*/
+/*반응형 1200*/
+@media screen and (max-width:1200px){
+    
+}
+/*반응형 768 태블릿*/
+@media screen and (max-width:768px){
+    
+}
+/*반응형 360*/
+@media screen and (max-width:360px){
+    
+}
 
 /*footer 시작*/
 #footer{
@@ -465,3 +631,15 @@ body{
     font-size: 13px;
 }
 /*footer 끝*/
+/*반응형 1200*/
+@media screen and (max-width:1200px){
+    
+}
+/*반응형 768 태블릿*/
+@media screen and (max-width:768px){
+    
+}
+/*반응형 360*/
+@media screen and (max-width:360px){
+    
+}
