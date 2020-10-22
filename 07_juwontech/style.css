@@ -150,6 +150,7 @@ body{
         padding: 0 0;
     }
     #header nav{
+        display: none; /* 정리후 삭제 */
         float: none;
         position: fixed;
         left: 0;
@@ -185,6 +186,7 @@ body{
         color: #2427aa;
     }
     #header .gnb{
+        display: none; /* 정리후 삭제 */
         float: none;
         width: 25%;
         padding: 34px 40px 0;
@@ -303,7 +305,16 @@ body{
 }
 /*반응형 768 태블릿*/
 @media screen and (max-width:768px){
-    
+    #visual{
+        width: 100%;
+    }
+    #visual .swiper-slide{
+        height: 350px;
+    }
+    #visual .swiper-slide .text{
+        width: 50%;
+        padding-top: 120px;
+    }
 }
 /*반응형 360*/
 @media screen and (max-width:360px){
@@ -320,6 +331,9 @@ body{
     float: left;
     width: 300px;
     border-right: 1px solid rgba(221, 221, 221);
+}
+#content1 .left_box div{
+    
 }
 #content1 .left_box p{
     font-size: 13px;
@@ -346,18 +360,18 @@ body{
     color: #fff;
     background: #0d7ccd;
 }
-#content1 .left_box strong:nth-of-type(2){
+#content1 .left_box .fax strong{
     background: #595959; 
 }
 #content1 .left_box a p{
-    margin-top: 5px;
+    padding-top: 5px;
     font-size: 26px;
     font-weight: bold;
     line-height: 26px;
     letter-spacing: -1px;
     color: #0176cc;
 }
-#content1 .left_box a:nth-of-type(2) p{
+#content1 .left_box .fax a p{
     color: #595959;
 }
 #content1 .right_box{
@@ -400,11 +414,74 @@ body{
 /*content1 끝*/
 /*반응형 1200*/
 @media screen and (max-width:1200px){
-    
+    #content1{
+        width: 768px;
+    }
+    #content1 .left_box{
+        float: none;
+        width: 100%;
+        padding-bottom: 30px;
+        border-right: none;
+        border-bottom: 1px solid rgba(221, 221, 221);
+        text-align: center;
+    }
+    #content1 .left_box div{
+        margin: 10px 0;
+    }
+    #content1 .left_box strong{
+        float: none;
+        vertical-align: top;
+        display: inline-block;
+        margin: 7px 0px 10px 0;
+    }
+    #content1 .left_box a{
+        display: inline-block;
+        vertical-align: top;
+    }
+    #content1 .left_box a p{
+        text-align: left;
+        width: 170px;
+    }
+    #content1 .right_box{
+        float: none;
+        padding-top: 30px;
+    }
+    #content1 .right_box ul{
+        width: 768px
+    }
 }
 /*반응형 768 태블릿*/
 @media screen and (max-width:768px){
-    
+    #content1{
+        width: 100%;
+        padding-bottom: 0;
+    }
+    #content1 .left_box{
+        width: 100%;
+        padding: 0;
+        border-bottom: none;
+    }
+    #content1 .left_box div{
+        margin: 5px 0;
+    }
+    #content1 .right_box{
+        float: none;
+        padding-top: 30px;
+    }
+    #content1 .right_box ul{
+        width: 100%
+    }
+    #content1 .right_box li{
+        width: 50%;
+        border-top: 1px solid rgba(221, 221, 221);
+        border-top: 1px solid rgba(221, 221, 221);
+    }
+    #content1 .right_box li:nth-of-type(1){
+        width: 100%;
+    }
+    #content1 .right_box a{
+        padding: 20px 0;
+    }
 }
 /*반응형 360*/
 @media screen and (max-width:360px){
@@ -426,7 +503,7 @@ body{
     float: left;
     width: 50%;
     height: 300px;
-    padding: 55px 0 0 30px;
+    padding: 55px 30px 0 30px;
     color: #fff;
     background: url(img/section_bg2-1.jpg) no-repeat center;
     background-size: cover;
@@ -471,11 +548,53 @@ body{
 /*content2 끝*/
 /*반응형 1200*/
 @media screen and (max-width:1200px){
-    
+    #content2 .right_box .des{
+        margin: 20px 0 20px;
+    }
+    #content2 .right_box .des br{
+        display: none;
+    }
 }
 /*반응형 768 태블릿*/
 @media screen and (max-width:768px){
-    
+    #content2{
+        width: 100%;
+    }
+    #content2 .left_box{
+        float: none;
+        width: 100%;
+        height: 150px;
+    }
+    #content2 .right_box{
+        float: none;
+        width: 100%;
+        height: 200px;
+        padding: 20px 30px 0 20px;
+        text-align: center;
+    }
+    #content2 .right_box .title{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    #content2 .right_box .title span{
+        margin-left: 15px;
+        font-size: 16px;
+    }
+    #content2 .right_box .title span::before{
+        height: 15px;
+        margin: 2px 10px 0 0;
+    }
+    #content2 .right_box .des{
+        margin: 20px 0 20px;
+        text-align: center;
+    }
+    #content2 .right_box .btn{
+        width: 150px;
+        height: 30px;
+        margin: 0 auto;
+        font-size: 12px;
+        line-height: 28px;
+    }
 }
 /*반응형 360*/
 @media screen and (max-width:360px){
@@ -573,11 +692,74 @@ body{
 /*content3 끝*/
 /*반응형 1200*/
 @media screen and (max-width:1200px){
-    
+    #content3{
+        width: 768px;
+    }
+    #content3 .left_box{
+        width: 210px;
+    }
+    #content3 .left_box a{
+        height: 110px;
+        padding: 30px 20px;
+    }
+    #content3 .left_box .arrow{
+        right: 20px;
+        top: 60px;
+    }
+    #content3 .left_box div:hover .arrow{
+        right: 10px;
+    }
+    #content3 .right_box{
+        width: 538px;
+        height: 220px;
+    }
+    #content3 .right_box .title{
+        height: 20px;
+    }
+    #content3 .right_box .btn{
+        height: 20px;
+    }
+    #content3 .right_box .swiper-container{
+        width: 498px;
+        margin: 0 -10px 0 0;
+    }
 }
 /*반응형 768 태블릿*/
 @media screen and (max-width:768px){
-    
+    #content3{
+        width: 100%;
+        padding: 0px;
+    }
+    #content3 .left_box{
+        float: none;
+        width: 100%;
+    }
+    #content3 .left_box p{
+        font-size: 16px;
+    }
+    #content3 .left_box p span{
+        font-size: 14px;
+    }
+    #content3 .left_box .arrow{
+        right: 40px;
+        top: 50px;
+    }
+    #content3 .left_box div:hover .arrow{
+        right: 30px;
+    }
+    #content3 .right_box{
+        float: none;
+        width: 100%;
+        height: 260px;
+        padding: 20px;
+        border: none;
+        font-size: 16px;
+    }
+    #content3 .right_box .swiper-container{
+        clear: both;
+        width: 100%;
+        padding: 20px 0;
+    }
 }
 /*반응형 360*/
 @media screen and (max-width:360px){
@@ -633,11 +815,27 @@ body{
 /*footer 끝*/
 /*반응형 1200*/
 @media screen and (max-width:1200px){
-    
+    #footer .wrap{
+        width: 768px;
+    }
 }
 /*반응형 768 태블릿*/
 @media screen and (max-width:768px){
-    
+    #footer{
+        padding: 30px 30px;
+    }
+    #footer .wrap{
+        width: 100%;
+    }
+    #footer .footer_menu li a{
+        font-size: 13px;
+    }
+    #footer address{
+        font-size: 12px;
+    }
+    #footer .copyright{
+        font-size: 12px;
+    }
 }
 /*반응형 360*/
 @media screen and (max-width:360px){

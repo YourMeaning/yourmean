@@ -92,22 +92,26 @@
     </section>
 
     <section id="content1" class="cf">
-        <div class="left_box">
+        <div class="left_box cf">
             <p>
                 <span>고객센터</span><br>
                 <span>CUSTOMER CENTER</span><br>
                 하나의 제품이라고 고품질이 아니면<br> 
                 취급하지 않습니다.
             </p>
+            <div class="tel">
             <strong>TEL</strong>
-            <a href="#">
-                <p>041-567-7723</p>
-                <p>070-8263-7712</p>
-            </a>
-            <strong>FAX</strong>
-            <a href="#">
-                <p>041-567-7712</p>
-            </a>
+                <a href="#">
+                    <p>041-567-7723</p>
+                    <p>070-8263-7712</p>
+                </a>
+            </div>
+            <div class="fax">
+                <strong>FAX</strong>
+                <a href="#">
+                    <p>041-567-7712</p>
+                </a>
+            </div>
         </div>
         <div class="right_box">
             <ul class="cf">
@@ -263,7 +267,7 @@
         </div>
     </footer>
 
-    <a href="#header" class="nav_top">Top</a>
+<!--    <a href="#header" class="nav_top">Top</a>-->
 
     <script type="text/javascript">
         //    서브메뉴
@@ -274,6 +278,8 @@
             } else {
                 subToggle = 0;
             }
+        
+        //창크기조절
         $(window).on('resize',function() {
             windowWidth = $(window).width();
             if(windowWidth > 768) {
@@ -331,16 +337,28 @@
             return false;
         });
         $('.swiper-start').trigger('click');
-        var my2Swiper = new Swiper('.second', {
+        var mySwiper2 = new Swiper('.second', {
             navigation: {
                 prevEl: '.swiper-button-prev',
                 nextEl: '.swiper-button-next',
             },
             loop: true,
-            slidesPerView: 4,
             spaceBetween: 20,
-            speed: 500
+            speed: 500,
+            breakpoints: {
+                360: {
+                    slidesPerView: 2
+                },
+                768: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10
+                },
+                1200: {
+                    slidesPerView: 4
+                }
+            }
         });
+        
 
     </script>
 </body>
