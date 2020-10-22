@@ -104,7 +104,7 @@ body{
 }
 /*header 끝*/
 /*반응형 1200*/
-@media screen and (max-width:1200px){
+@media screen and (min-width:768px) and (max-width:1200px){
     #header .logo{
         width: 25%;
         padding: 20px 10px 0;
@@ -139,7 +139,7 @@ body{
     }
 }
 /*반응형 768 태블릿*/
-@media screen and (max-width:768px){
+@media screen and (min-width:360px) and (max-width:768px){
     #header {
         height: 60px;
     }
@@ -300,11 +300,11 @@ body{
 }
 /*visual 끝*/
 /*반응형 1200*/
-@media screen and (max-width:1200px){
+@media screen and (min-width:768px) and (max-width:1200px){
     
 }
 /*반응형 768 태블릿*/
-@media screen and (max-width:768px){
+@media screen and (min-width:360px) and (max-width:768px){
     #visual{
         width: 100%;
     }
@@ -331,9 +331,6 @@ body{
     float: left;
     width: 300px;
     border-right: 1px solid rgba(221, 221, 221);
-}
-#content1 .left_box div{
-    
 }
 #content1 .left_box p{
     font-size: 13px;
@@ -413,7 +410,7 @@ body{
 }
 /*content1 끝*/
 /*반응형 1200*/
-@media screen and (max-width:1200px){
+@media screen and (min-width:768px) and (max-width:1200px){
     #content1{
         width: 768px;
     }
@@ -451,18 +448,34 @@ body{
     }
 }
 /*반응형 768 태블릿*/
-@media screen and (max-width:768px){
+@media screen and (min-width:360px) and (max-width:768px){
     #content1{
         width: 100%;
         padding-bottom: 0;
     }
     #content1 .left_box{
         width: 100%;
+        margin-bottom: 20px;
         padding: 0;
         border-bottom: none;
+        text-align: center;
     }
     #content1 .left_box div{
         margin: 5px 0;
+    }
+    #content1 .left_box strong{
+        float: none;
+        vertical-align: top;
+        display: inline-block;
+        margin: 7px 0px 10px 0;
+    }
+    #content1 .left_box a{
+        display: inline-block;
+        vertical-align: top;
+    }
+    #content1 .left_box a p{
+        text-align: left;
+        width: 170px;
     }
     #content1 .right_box{
         float: none;
@@ -547,7 +560,7 @@ body{
 }
 /*content2 끝*/
 /*반응형 1200*/
-@media screen and (max-width:1200px){
+@media screen and (min-width:768px) and (max-width:1200px){
     #content2 .right_box .des{
         margin: 20px 0 20px;
     }
@@ -556,7 +569,7 @@ body{
     }
 }
 /*반응형 768 태블릿*/
-@media screen and (max-width:768px){
+@media screen and (min-width:360px) and (max-width:768px){
     #content2{
         width: 100%;
     }
@@ -587,6 +600,9 @@ body{
     #content2 .right_box .des{
         margin: 20px 0 20px;
         text-align: center;
+    }
+    #content2 .right_box .des br{
+        display: none;
     }
     #content2 .right_box .btn{
         width: 150px;
@@ -691,7 +707,7 @@ body{
 }
 /*content3 끝*/
 /*반응형 1200*/
-@media screen and (max-width:1200px){
+@media screen and (min-width:768px) and (max-width:1200px){
     #content3{
         width: 768px;
     }
@@ -725,7 +741,7 @@ body{
     }
 }
 /*반응형 768 태블릿*/
-@media screen and (max-width:768px){
+@media screen and (min-width:360px) and (max-width:768px){
     #content3{
         width: 100%;
         padding: 0px;
@@ -814,13 +830,13 @@ body{
 }
 /*footer 끝*/
 /*반응형 1200*/
-@media screen and (max-width:1200px){
+@media screen and (min-width:768px) and (max-width:1200px){
     #footer .wrap{
         width: 768px;
     }
 }
 /*반응형 768 태블릿*/
-@media screen and (max-width:768px){
+@media screen and (min-width:360px) and (max-width:768px){
     #footer{
         padding: 30px 30px;
     }
