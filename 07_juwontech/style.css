@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', NanumSquare, 나눔스퀘어, Nanum Barun Gothic, 나눔바른고딕, "Nanum Barun Gothic", NanumGothic, "나눔고딕", "Apple SD Gothic Neo", Dotum, "돋움", sans-serif;
+    font-family: NanumSquare, 나눔스퀘어, Nanum Barun Gothic, 나눔바른고딕, "Nanum Barun Gothic", NanumGothic, "나눔고딕", "Apple SD Gothic Neo", Dotum, "돋움", sans-serif;
     font-style: normal;
 }
 *::after,
